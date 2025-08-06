@@ -10,3 +10,4 @@ wheels/
 .venv
 
 ssh_config.json
+.vscode
