@@ -11,6 +11,18 @@ from PyQt6.QtGui import QFont
 
 from utils.SSHManager import SSHManager
 
+import logging
+
+# 로거 기본 설정
+logging.basicConfig(
+    level=logging.INFO,                        # INFO 이상 레벨만 기록
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.FileHandler("log", mode="a", encoding="utf-8"),  # 파일에 append
+        logging.StreamHandler()                                       # 콘솔에도 출력
+    ]
+)
+
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -128,11 +140,11 @@ class MainWindow(QMainWindow):
         # SSHManager를 사용하여 SSH 연결을 시도
         try:
             self.ssh = SSHManager(host, port, userId, key_path)
-            print("SSH 연결 성공")
+            logging.info("SSH 연결 성공")
 
             
         except Exception as e:
-            print(f"SSH 연결 실패: {e}")
+            logging.info(f"SSH 연결 실패: {e}")
 
         # connect 버튼 비활성화
         self.connectButton.setEnabled(False)
@@ -146,10 +158,10 @@ class MainWindow(QMainWindow):
         file_path = self.filePathLineEdit.text()
 
         if not self.ssh: 
-            print("SSH 연결이 되어 있지 않습니다.")
+            logging.info("SSH 연결이 되어 있지 않습니다.")
             return
         if not file_path:
-            print("파일 경로가 비어 있습니다.")
+            logging.info("파일 경로가 비어 있습니다.")
             return
 
         # 파일 감시 스레드 시작
@@ -169,7 +181,7 @@ class MainWindow(QMainWindow):
             파일이 업데이트되었을 때 호출되는 함수
         """
 
-        print(f"파일이 업데이트되었습니다: {remote_file_path}")
+        logging.info(f"파일이 업데이트되었습니다: {remote_file_path}")
 
         # 파일 다운로드 후 CSV 변환
         local_file_path = './temp/output.lis'
@@ -180,9 +192,9 @@ class MainWindow(QMainWindow):
         try:
             self.data = pd.read_csv(local_file_path.replace('.lis', '.csv'))
             self.dataColumnNames = self.data.columns.tolist()
-            print(f"Data loaded successfully. Columns: {self.dataColumnNames}")
+            logging.info(f"Data loaded successfully. Columns: {self.dataColumnNames}")
         except Exception as e:
-            print(f"Error loading data: {e}")
+            logging.info(f"Error loading data: {e}")
             self.data = None
             self.dataColumnNames = None
 
@@ -225,7 +237,7 @@ class MainWindow(QMainWindow):
 
         # Dock이 닫혔을 때, dock 스스로와 PlotInterface를 삭제
         if not visible:
-            print("Dock is closing, deleting PlotInterface...")
+            logging.info("Dock is closing, deleting PlotInterface...")
             self.deletePlot(plotInterface)
             dock.deleteLater()
     
@@ -236,14 +248,14 @@ class MainWindow(QMainWindow):
         """
 
         if plotInterface in self.plotInterfaces:
-            print(f"Attempting to delete PlotInterface: {plotInterface}")
+            logging.info(f"Attempting to delete PlotInterface: {plotInterface}")
             # QFormLayout에서 frame 제거
             self.formLayout2.removeWidget(plotInterface.frame)
             plotInterface.delete()  # PlotInterface의 delete 메서드 호출
             self.plotInterfaces.remove(plotInterface)  # 리스트에서 제거
-            print(f"Deleted PlotInterface: {plotInterface}")
+            logging.info(f"Deleted PlotInterface: {plotInterface}")
         else:
-            print("PlotInterface not found.")
+            logging.info("PlotInterface not found.")
 
     def updatePlot(self, state=None, column=None):
 
@@ -254,13 +266,13 @@ class MainWindow(QMainWindow):
         # x축 데이터 가져오기
         x_data = self.xAxisComboBox.currentText()
         if x_data not in self.dataColumnNames:
-            print(f"Error: X-axis data '{x_data}' not found in columns.")
+            logging.info(f"Error: X-axis data '{x_data}' not found in columns.")
             return
 
         # y축 데이터 가져오기
         y_data_columns = [cb.text() for cb in self.yAxisCheckBoxes if cb.isChecked()]
         if not y_data_columns:
-            print("Warning: No Y-axis data selected.")
+            logging.info("Warning: No Y-axis data selected.")
             return
 
         # PlotWidget 초기화
@@ -273,7 +285,7 @@ class MainWindow(QMainWindow):
                 self.data[y_data],  # Y축 데이터
                 pen=pg.mkPen(color=(255, 0, 0), width=2)  # 스타일 설정
             )
-        print(f"Updating plot with X: {x_data}, Y: {y_data_columns}")
+        logging.info(f"Updating plot with X: {x_data}, Y: {y_data_columns}")
 
     def loadSettings(self):
 
@@ -314,7 +326,7 @@ class MainWindow(QMainWindow):
         }
         with open("./ssh_config.json", "w") as config_file:
             json.dump(ssh_config, config_file, indent=4)
-        print("SSH 설정 저장 완료")
+        logging.info("SSH 설정 저장 완료")
 
 class ServerFileWatcherThread(QThread):
     file_updated = pyqtSignal(str)  # 파일 변경 시 신호를 보냄
@@ -337,11 +349,11 @@ class ServerFileWatcherThread(QThread):
 
                 if last_modified_time is None or current_modified_time != last_modified_time:
                     last_modified_time = current_modified_time
-                    print(f"마지막 수정 시간: {datetime.fromtimestamp(last_modified_time)}")
-                    print(f"파일이 변경되었습니다: {self.remote_file_path}")
+                    logging.info(f"마지막 수정 시간: {datetime.fromtimestamp(last_modified_time)}")
+                    logging.info(f"파일이 변경되었습니다: {self.remote_file_path}")
                     self.file_updated.emit(self.remote_file_path)  # 파일 변경 신호 전송
             except Exception as e:
-                print(f"Error watching file: {e}")
+                logging.info(f"Error watching file: {e}")
             time.sleep(1)  # 1초 간격으로 파일 감시
 
 class PlotInterface:
@@ -385,13 +397,13 @@ class PlotInterface:
         # x축 데이터 가져오기
         x_data = self.xAxisComboBox.currentText()
         if x_data not in self.dataColumnNames:
-            print(f"Error: X-axis data '{x_data}' not found in columns.")
+            logging.info(f"Error: X-axis data '{x_data}' not found in columns.")
             return
 
         # y축 데이터 가져오기
         y_data_columns = [cb.text() for cb in self.yAxisCheckBoxes if cb.isChecked()]
         if not y_data_columns:
-            print("Warning: No Y-axis data selected.")
+            logging.info("Warning: No Y-axis data selected.")
             return
 
         # PlotWidget 초기화
@@ -404,7 +416,7 @@ class PlotInterface:
                 self.data[y_data],  # Y축 데이터
                 pen=pg.mkPen(color=(255, 0, 0), width=2)  # 스타일 설정
             )
-        print(f"Updating plot with X: {x_data}, Y: {y_data_columns}")
+        logging.info(f"Updating plot with X: {x_data}, Y: {y_data_columns}")
 
     def delete(self):
 
@@ -414,7 +426,7 @@ class PlotInterface:
 
         self.plot.deleteLater()  # PlotWidget 삭제
         self.frame.deleteLater()  # QFrame 삭제
-        print("Plot and interface deleted.")
+        logging.info("Plot and interface deleted.")
 
 def lisToCSV(path) -> None:
 
@@ -427,16 +439,16 @@ def lisToCSV(path) -> None:
 
     # eishin을 실행해 .lis를 CSV로. "Usage: " << argv[0] << " <input_lis_file> <output_csv_file>"
     if not os.path.exists(path):
-        print(f"File not found: {path}")
+        logging.info(f"File not found: {path}")
         return
     
     output_path = path.replace('.lis', '.csv')
     command = f"eishin {path} {output_path}"
     try:
         subprocess.run(command, shell=True, check=True)
-        print(f"Converted {path} to {output_path}")
+        logging.info(f"Converted {path} to {output_path}")
     except subprocess.CalledProcessError as e:
-        print(f"Error converting {path} to CSV: {e}")
+        logging.info(f"Error converting {path} to CSV: {e}")
 
 def getFileAndPlot():pass
 

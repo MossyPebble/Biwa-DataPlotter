@@ -1,0 +1,117 @@
+2025-08-07 13:52:00,060 [INFO] Connected (version 2.0, client OpenSSH_7.4)
+2025-08-07 13:52:00,163 [INFO] Authentication (publickey) successful!
+2025-08-07 13:52:00,419 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-08-07 13:52:00,419 [INFO] SSH 연결 성공
+2025-08-07 13:52:02,815 [INFO] 파일이 업데이트되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 13:52:03,028 [INFO] 마지막 수정 시간: 2025-08-07 12:48:08
+2025-08-07 13:52:03,028 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 13:52:03,322 [INFO] Converted ./temp/output.lis to ./temp/output.csv
+2025-08-07 13:52:03,391 [INFO] Data loaded successfully. Columns: ['time', 'current vsine', 'voltage 0', 'voltage wl']
+2025-08-07 13:52:03,393 [INFO] 파일이 업데이트되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 13:52:03,743 [INFO] Converted ./temp/output.lis to ./temp/output.csv
+2025-08-07 13:52:03,820 [INFO] Data loaded successfully. Columns: ['time', 'current vsine', 'voltage 0', 'voltage wl']
+2025-08-07 13:52:13,282 [INFO] Warning: No Y-axis data selected.
+2025-08-07 13:52:13,814 [INFO] Updating plot with X: current vsine, Y: ['current vsine']
+2025-08-07 13:52:14,339 [INFO] Warning: No Y-axis data selected.
+2025-08-07 13:52:14,690 [INFO] Updating plot with X: current vsine, Y: ['voltage wl']
+2025-08-07 13:52:17,431 [INFO] Updating plot with X: voltage wl, Y: ['voltage wl']
+2025-08-07 13:52:17,912 [INFO] Updating plot with X: voltage wl, Y: ['current vsine', 'voltage wl']
+2025-08-07 13:52:19,279 [INFO] Updating plot with X: voltage wl, Y: ['current vsine']
+2025-08-07 13:52:19,885 [INFO] Warning: No Y-axis data selected.
+2025-08-07 13:52:20,691 [INFO] Updating plot with X: voltage wl, Y: ['voltage wl']
+2025-08-07 13:52:21,264 [INFO] Warning: No Y-axis data selected.
+2025-08-07 13:52:21,754 [INFO] Updating plot with X: voltage wl, Y: ['current vsine']
+2025-08-07 13:53:54,087 [INFO] Dock is closing, deleting PlotInterface...
+2025-08-07 13:53:54,089 [INFO] Attempting to delete PlotInterface: <__main__.PlotInterface object at 0x0000019A283B7E20>
+2025-08-07 13:53:54,089 [INFO] Plot and interface deleted.
+2025-08-07 13:53:54,089 [INFO] Deleted PlotInterface: <__main__.PlotInterface object at 0x0000019A283B7E20>
+2025-08-07 13:54:11,401 [INFO] Dock is closing, deleting PlotInterface...
+2025-08-07 13:54:11,402 [INFO] Attempting to delete PlotInterface: <__main__.PlotInterface object at 0x0000019A283B7640>
+2025-08-07 13:54:11,402 [INFO] Plot and interface deleted.
+2025-08-07 13:54:11,402 [INFO] Deleted PlotInterface: <__main__.PlotInterface object at 0x0000019A283B7640>
+2025-08-07 13:54:13,432 [INFO] Dock is closing, deleting PlotInterface...
+2025-08-07 13:54:13,432 [INFO] Attempting to delete PlotInterface: <__main__.PlotInterface object at 0x0000019A283B7400>
+2025-08-07 13:54:13,432 [INFO] Plot and interface deleted.
+2025-08-07 13:54:13,433 [INFO] Deleted PlotInterface: <__main__.PlotInterface object at 0x0000019A283B7400>
+2025-08-07 13:54:15,210 [INFO] Updating plot with X: time, Y: ['voltage wl']
+2025-08-07 13:54:15,717 [INFO] Warning: No Y-axis data selected.
+2025-08-07 13:54:16,457 [INFO] Dock is closing, deleting PlotInterface...
+2025-08-07 13:54:16,457 [INFO] Attempting to delete PlotInterface: <__main__.PlotInterface object at 0x0000019A2839AF40>
+2025-08-07 13:54:16,458 [INFO] Plot and interface deleted.
+2025-08-07 13:54:16,458 [INFO] Deleted PlotInterface: <__main__.PlotInterface object at 0x0000019A2839AF40>
+2025-08-07 13:54:20,498 [INFO] Updating plot with X: time, Y: ['voltage wl']
+2025-08-07 13:54:21,060 [INFO] Warning: No Y-axis data selected.
+2025-08-07 13:54:21,418 [INFO] Updating plot with X: time, Y: ['current vsine']
+2025-08-07 13:54:22,140 [INFO] Warning: No Y-axis data selected.
+2025-08-07 13:54:32,297 [INFO] Updating plot with X: time, Y: ['voltage wl']
+2025-08-07 13:54:33,131 [INFO] Warning: No Y-axis data selected.
+2025-08-07 13:54:34,272 [INFO] Warning: No Y-axis data selected.
+2025-08-07 13:54:35,789 [INFO] Updating plot with X: voltage wl, Y: ['current vsine']
+2025-08-07 13:55:05,761 [INFO] 마지막 수정 시간: 2025-08-07 13:55:05
+2025-08-07 13:55:05,761 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 13:55:05,761 [INFO] 파일이 업데이트되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 13:55:06,178 [INFO] Converted ./temp/output.lis to ./temp/output.csv
+2025-08-07 13:55:06,225 [INFO] Data loaded successfully. Columns: ['time', 'current vsine', 'voltage 0', 'voltage wl']
+2025-08-07 13:55:06,229 [INFO] Updating plot with X: voltage wl, Y: ['current vsine']
+2025-08-07 13:55:16,630 [INFO] 마지막 수정 시간: 2025-08-07 13:55:16
+2025-08-07 13:55:16,630 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 13:55:16,631 [INFO] 파일이 업데이트되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 13:55:16,998 [INFO] Converted ./temp/output.lis to ./temp/output.csv
+2025-08-07 13:55:17,018 [INFO] Data loaded successfully. Columns: ['time', 'current vsine', 'voltage 0', 'voltage wl']
+2025-08-07 13:55:17,023 [INFO] Updating plot with X: voltage wl, Y: ['current vsine']
+2025-08-07 14:05:01,301 [INFO] 마지막 수정 시간: 2025-08-07 14:05:01
+2025-08-07 14:05:01,301 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 14:05:01,302 [INFO] 파일이 업데이트되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 14:05:01,469 [INFO] Error converting ./temp/output.lis to CSV: Command 'eishin ./temp/output.lis ./temp/output.csv' returned non-zero exit status 1.
+2025-08-07 14:05:01,482 [INFO] Data loaded successfully. Columns: ['time', 'current vsine', 'voltage 0', 'voltage wl']
+2025-08-07 14:05:01,486 [INFO] Updating plot with X: voltage wl, Y: ['current vsine']
+2025-08-07 14:05:02,501 [INFO] 마지막 수정 시간: 2025-08-07 14:05:02
+2025-08-07 14:05:02,502 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 14:05:02,502 [INFO] 파일이 업데이트되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 14:05:02,854 [INFO] Converted ./temp/output.lis to ./temp/output.csv
+2025-08-07 14:05:02,890 [INFO] Data loaded successfully. Columns: ['time', 'current vsine', 'voltage 0', 'voltage wl']
+2025-08-07 14:05:02,894 [INFO] Updating plot with X: voltage wl, Y: ['current vsine']
+2025-08-07 14:05:09,696 [INFO] 마지막 수정 시간: 2025-08-07 14:05:10
+2025-08-07 14:05:09,697 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 14:05:09,697 [INFO] 파일이 업데이트되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 14:05:10,113 [INFO] Converted ./temp/output.lis to ./temp/output.csv
+2025-08-07 14:05:10,133 [INFO] Data loaded successfully. Columns: ['time', 'current vsine', 'voltage 0', 'voltage wl']
+2025-08-07 14:05:10,140 [INFO] Updating plot with X: voltage wl, Y: ['current vsine']
+2025-08-07 14:05:20,511 [INFO] 마지막 수정 시간: 2025-08-07 14:05:20
+2025-08-07 14:05:20,522 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 14:05:20,523 [INFO] 파일이 업데이트되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 14:05:20,678 [INFO] Error converting ./temp/output.lis to CSV: Command 'eishin ./temp/output.lis ./temp/output.csv' returned non-zero exit status 1.
+2025-08-07 14:05:20,698 [INFO] Data loaded successfully. Columns: ['time', 'current vsine', 'voltage 0', 'voltage wl']
+2025-08-07 14:05:20,706 [INFO] Updating plot with X: voltage wl, Y: ['current vsine']
+2025-08-07 14:05:21,719 [INFO] 마지막 수정 시간: 2025-08-07 14:05:21
+2025-08-07 14:05:21,720 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 14:05:21,721 [INFO] 파일이 업데이트되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 14:05:22,152 [INFO] Converted ./temp/output.lis to ./temp/output.csv
+2025-08-07 14:05:22,225 [INFO] Data loaded successfully. Columns: ['time', 'current vsine', 'voltage 0', 'voltage wl']
+2025-08-07 14:05:22,229 [INFO] Updating plot with X: voltage wl, Y: ['current vsine']
+2025-08-07 14:05:31,420 [INFO] 마지막 수정 시간: 2025-08-07 14:05:31
+2025-08-07 14:05:31,421 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 14:05:31,422 [INFO] 파일이 업데이트되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 14:05:31,517 [INFO] Error converting ./temp/output.lis to CSV: Command 'eishin ./temp/output.lis ./temp/output.csv' returned non-zero exit status 1.
+2025-08-07 14:05:31,532 [INFO] Data loaded successfully. Columns: ['time', 'current vsine', 'voltage 0', 'voltage wl']
+2025-08-07 14:05:31,536 [INFO] Updating plot with X: voltage wl, Y: ['current vsine']
+2025-08-07 14:05:32,621 [INFO] 마지막 수정 시간: 2025-08-07 14:05:32
+2025-08-07 14:05:32,622 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 14:05:32,623 [INFO] 파일이 업데이트되었습니다: /home/user_r/User/CWS/Workspace/Study/Ferro_Study/250804_Ferro_Study/test/output/test-00-fecap.lis
+2025-08-07 14:05:32,953 [INFO] Converted ./temp/output.lis to ./temp/output.csv
+2025-08-07 14:05:32,972 [INFO] Data loaded successfully. Columns: ['time', 'current vsine', 'voltage 0', 'voltage wl']
+2025-08-07 14:05:32,976 [INFO] Updating plot with X: voltage wl, Y: ['current vsine']
+2025-08-07 14:06:27,028 [INFO] Updating plot with X: voltage wl, Y: ['current vsine', 'voltage wl']
+2025-08-07 14:06:28,887 [INFO] Updating plot with X: voltage wl, Y: ['current vsine']
+2025-08-07 14:06:31,448 [INFO] Updating plot with X: voltage wl, Y: ['current vsine', 'voltage wl']
+2025-08-07 14:06:34,160 [INFO] Updating plot with X: voltage wl, Y: ['current vsine']
+2025-08-07 14:06:36,563 [INFO] Updating plot with X: voltage wl, Y: ['time', 'current vsine']
+2025-08-07 14:06:37,589 [INFO] Updating plot with X: voltage wl, Y: ['current vsine']
+2025-08-07 14:06:38,020 [INFO] Updating plot with X: voltage wl, Y: ['time', 'current vsine']
+2025-08-07 14:06:40,142 [INFO] Updating plot with X: voltage wl, Y: ['current vsine']
+2025-08-07 14:06:41,205 [INFO] Updating plot with X: voltage wl, Y: ['current vsine', 'voltage 0']
+2025-08-07 14:06:41,718 [INFO] Updating plot with X: voltage wl, Y: ['current vsine']
+2025-08-07 14:06:43,308 [INFO] Updating plot with X: voltage wl, Y: ['current vsine', 'voltage wl']
+2025-08-07 14:06:43,742 [INFO] Updating plot with X: voltage wl, Y: ['current vsine']
+2025-08-07 14:07:49,321 [INFO] Updating plot with X: voltage wl, Y: ['time', 'current vsine']
+2025-08-07 14:07:52,488 [INFO] Updating plot with X: voltage wl, Y: ['current vsine']
