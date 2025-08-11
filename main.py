@@ -3,11 +3,11 @@ from datetime import datetime
 import pyqtgraph as pg
 import pandas as pd
 from PyQt6.QtWidgets import (
-    QApplication, QMainWindow, QWidget, QSplitter, QVBoxLayout, QLabel, QDockWidget, QTabWidget, QHBoxLayout, QLineEdit, QFormLayout, QPushButton, QMenu, QCheckBox, QRadioButton, QGridLayout, QComboBox, QFrame
+    QApplication, QMainWindow, QWidget, QSplitter, QVBoxLayout, QLabel, QDockWidget, QTabWidget, QLineEdit, QFormLayout, QPushButton, QMenu, QCheckBox, QGridLayout, QComboBox, QFrame, QTextEdit, QToolTip
 )
 from PyQt6.QtGui import QAction
 from PyQt6.QtCore import Qt, QThread, pyqtSignal, QEvent
-from PyQt6.QtGui import QFont
+from PyQt6.QtGui import QFont, QShortcut, QKeySequence
 
 from utils.SSHManager import SSHManager
 
@@ -18,7 +18,7 @@ logging.basicConfig(
     level=logging.INFO,                        # INFO 이상 레벨만 기록
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
-        logging.FileHandler("log", mode="a", encoding="utf-8"),  # 파일에 append
+        logging.FileHandler("log.txt", mode="a", encoding="utf-8"),  # 파일에 append
         logging.StreamHandler()                                       # 콘솔에도 출력
     ]
 )
@@ -57,13 +57,13 @@ class MainWindow(QMainWindow):
         self.rightWidget = rightWidget
 
         # 왼쪽에 도크된 임시 그래프 A, B (A 위에 B가 쌓임)
-        dock_a = QDockWidget("Graph A", leftWidget)
+        dock_a = CustomDockWidget("Graph A", leftWidget)
         plot_a = pg.PlotWidget()
         dock_a.setWidget(plot_a)
         dock_a.setFloating(False)
         self.addDockWidget(Qt.DockWidgetArea.LeftDockWidgetArea, dock_a)
 
-        dock_b = QDockWidget("Graph B", leftWidget)
+        dock_b = CustomDockWidget("Graph B", leftWidget)
         plot_b = pg.PlotWidget()
         dock_b.setWidget(plot_b)
         dock_b.setFloating(False)
@@ -86,10 +86,10 @@ class MainWindow(QMainWindow):
         formLayout1.addRow("Port:", portLineEdit := QLineEdit())
         formLayout1.addRow("User ID:", userIdLineEdit := QLineEdit())
         formLayout1.addRow("Key Path:", keyPathLineEdit := QLineEdit())
-        formLayout1.addRow(QLabel("    "))
+        formLayout1.addRow(QLabel(""))
         formLayout1.addRow(QLabel("Path of .lis file"))
         formLayout1.addRow("File Path:", filePathLineEdit := QLineEdit())
-        formLayout1.addRow(QLabel("    "))
+        formLayout1.addRow(QLabel(""))
         formLayout1.addRow(QLabel("Connect and Get"))
         formLayout1.addRow("Connect:", connectButton := QPushButton("Connect"))
         formLayout1.addRow("Get File:", getButton := QPushButton("Get File"))
@@ -117,14 +117,115 @@ class MainWindow(QMainWindow):
         addGraphButton.clicked.connect(self.createPlotWidget)
         self.formLayout2 = formLayout2
 
-        self.loadSettings()
-
         # 예시 데이터
         x = [1, 2, 3, 4, 5]
         plot_a.plot(x, [1, 4, 9, 16, 25], pen='b')
         plot_b.plot(x, [25, 16, 9, 4, 1], pen='r')
 
         self.resize(1000, 600)
+
+        # ************** quickChange 탭 **************
+        tab3Widget = QWidget()
+        self.tabWidget.addTab(tab3Widget, "Quick Change")
+
+        formLayout3 = QFormLayout(tab3Widget)
+        formLayout3.addRow("", QLabel("Shell Command (F6)"))
+        self.shellCommandTextEdit = QTextEdit()
+        self.shellCommandTextEdit.setFixedHeight(150)
+        formLayout3.addRow("Command:", self.shellCommandTextEdit)
+        formLayout3.addRow("", QLabel(""))
+        
+        # built-in editor 구현
+        formLayout3.addRow("", QLabel("Built-in Editor (Save with Ctrl+S)"))
+        self.editorFilePathLineEdit = QLineEdit()
+        formLayout3.addRow("File Path:", self.editorFilePathLineEdit)
+        formLayout3.addRow("", getFileButton := QPushButton("Get File"))
+        getFileButton.clicked.connect(self.editorGetButtonHandler)
+        self.editorTextEdit = QTextEdit()
+        formLayout3.addRow("", self.editorTextEdit)
+
+        # *************** 단축키 설정 **************
+        self.shellCommandShortcut = QShortcut(QKeySequence("F6"), self)
+        self.shellCommandShortcut.activated.connect(self.executeShellCommand)
+
+        self.editorSaveShortcut = QShortcut(QKeySequence("Ctrl+S"), self.editorTextEdit)
+        self.editorSaveShortcut.activated.connect(self.editorSaveHotkeyHandler)
+        self.editorSaveShortcut.setContext(Qt.ShortcutContext.WidgetShortcut)
+
+        # *************** 초기 설정 로드 **************
+        self.loadSettings()
+
+    def showTooltip(self, message):
+        QToolTip.showText(self.mapToGlobal(self.rect().center()), message, self)
+
+    def editorGetButtonHandler(self):
+
+        """
+            Built-in Editor에서 Get File 버튼 클릭 시 호출되는 핸들러 함수
+        """
+
+        file_path = self.editorFilePathLineEdit.text().strip()
+        if not file_path:
+            logging.info("File path is empty.")
+            return
+
+        if not self.ssh:
+            logging.info("SSH connection is not established.")
+            self.showTooltip("SSH 연결이 되어 있지 않습니다.")
+            return
+
+        try:
+
+            # 파일 다운로드
+            local_file_path = './temp/editor_file.txt'
+            self.ssh.get_file(file_path, local_file_path)
+
+            # 파일 내용을 읽어서 에디터에 표시
+            with open(local_file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+                self.editorTextEdit.setPlainText(content)
+                logging.info(f"File loaded successfully: {file_path}")
+        except Exception as e:
+            logging.info(f"Error getting file: {e}")
+
+    def editorSaveHotkeyHandler(self):
+
+        """
+            Built-in Editor에서 Ctrl+S 단축키로 파일 저장 시 호출되는 핸들러 함수
+        """
+
+        file_path = self.editorFilePathLineEdit.text().strip()
+        content = self.editorTextEdit.toPlainText()
+        try:
+
+            # 현재 에디터 내용을 읽어 서버 측 경로로 저장
+            local_file_path = './temp/editor_file.txt'
+            with open(local_file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            self.ssh.put_file(local_file_path, file_path)
+        except Exception as e:
+            logging.info(f"Error saving file: {e}")
+
+    def executeShellCommand(self):
+
+        """
+            Shell Command를 실행하는 메서드
+        """
+
+        command = self.shellCommandTextEdit.toPlainText().split('\n')
+        if not command:
+            logging.info("Shell Command is empty.")
+            return
+        if not self.ssh:
+            logging.info("SSH connection is not established.")
+            return
+
+        try:
+            channel = self.ssh.invoke_shell()
+            self.ssh.execute_commands_over_shell(channel, command)
+            channel.close()
+        except Exception as e:
+            logging.info(f"Error executing shell command: {e}")
 
     def connectButtonHandler(self):
 
@@ -161,7 +262,7 @@ class MainWindow(QMainWindow):
             logging.info("SSH 연결이 되어 있지 않습니다.")
             return
         if not file_path:
-            logging.info("파일 경로가 비어 있습니다.")
+            logging.info(f"파일 경로가 비어 있습니다: {file_path}")
             return
 
         # 파일 감시 스레드 시작
@@ -211,7 +312,7 @@ class MainWindow(QMainWindow):
         """
 
         # PlotWidget 생성
-        dock = QDockWidget(f"Graph {len(self.plotInterfaces) + 1}", self.leftWidget)
+        dock = CustomDockWidget(f"Graph {len(self.plotInterfaces) + 1}", self.leftWidget)
         plot = pg.PlotWidget()
         dock.setWidget(plot)
         dock.setFloating(False)
@@ -224,68 +325,10 @@ class MainWindow(QMainWindow):
         plotInterface.data = self.data  # 데이터 전달
         self.plotInterfaces.append(plotInterface)  # PlotInterface를 리스트에 저장
 
-        # Dock이 닫힐 때 PlotInterface 삭제
-        dock.visibilityChanged.connect(lambda visible: self.handleDockVisibilityChange(visible, plotInterface, dock))
+        # Dock과 PlotInterface 연결 (제거 과정에서 필요)
+        dock.linkedInterface = plotInterface
 
         return plotInterface
-    
-    def handleDockVisibilityChange(self, visible, plotInterface, dock):
-
-        """
-            QDockWidget의 가시성 변경을 처리하는 메서드
-        """
-
-        # Dock이 닫혔을 때, dock 스스로와 PlotInterface를 삭제
-        if not visible:
-            logging.info("Dock is closing, deleting PlotInterface...")
-            self.deletePlot(plotInterface)
-            dock.deleteLater()
-    
-    def deletePlot(self, plotInterface):
-
-        """
-            특정 PlotInterface를 삭제하는 메서드
-        """
-
-        if plotInterface in self.plotInterfaces:
-            logging.info(f"Attempting to delete PlotInterface: {plotInterface}")
-            # QFormLayout에서 frame 제거
-            self.formLayout2.removeWidget(plotInterface.frame)
-            plotInterface.delete()  # PlotInterface의 delete 메서드 호출
-            self.plotInterfaces.remove(plotInterface)  # 리스트에서 제거
-            logging.info(f"Deleted PlotInterface: {plotInterface}")
-        else:
-            logging.info("PlotInterface not found.")
-
-    def updatePlot(self, state=None, column=None):
-
-        """
-            Plot을 업데이트하는 메서드
-        """
-
-        # x축 데이터 가져오기
-        x_data = self.xAxisComboBox.currentText()
-        if x_data not in self.dataColumnNames:
-            logging.info(f"Error: X-axis data '{x_data}' not found in columns.")
-            return
-
-        # y축 데이터 가져오기
-        y_data_columns = [cb.text() for cb in self.yAxisCheckBoxes if cb.isChecked()]
-        if not y_data_columns:
-            logging.info("Warning: No Y-axis data selected.")
-            return
-
-        # PlotWidget 초기화
-        self.plot.clear()
-
-        # 선택된 데이터를 기반으로 그래프 그리기
-        for y_data in y_data_columns:
-            self.plot.plot(
-                self.data[x_data],  # X축 데이터
-                self.data[y_data],  # Y축 데이터
-                pen=pg.mkPen(color=(255, 0, 0), width=2)  # 스타일 설정
-            )
-        logging.info(f"Updating plot with X: {x_data}, Y: {y_data_columns}")
 
     def loadSettings(self):
 
@@ -297,7 +340,9 @@ class MainWindow(QMainWindow):
                     "port": 22,
                     "userId": "",
                     "key_path": "",
-                    "file_path": ""
+                    "file_path": "",
+                    "shell_command": "",
+                    "editor_file_path": ""
                 }, config_file, indent=4)
 
         # ssh_config.json 파일에서 SSH 설정을 로드
@@ -310,6 +355,8 @@ class MainWindow(QMainWindow):
                 self.userIdLineEdit.setText(ssh_config.get("userId", ""))
                 self.keyPathLineEdit.setText(ssh_config.get("key_path", ""))
                 self.filePathLineEdit.setText(ssh_config.get("file_path", ""))
+                self.shellCommandTextEdit.setPlainText(ssh_config.get("shell_command", ""))
+                self.editorFilePathLineEdit.setText(ssh_config.get("editor_file_path", ""))
 
     def saveSettings(self):
 
@@ -322,7 +369,9 @@ class MainWindow(QMainWindow):
             "port": int(self.portLineEdit.text()),
             "userId": self.userIdLineEdit.text(),
             "key_path": self.keyPathLineEdit.text(),
-            "file_path": self.filePathLineEdit.text()
+            "file_path": self.filePathLineEdit.text(),
+            "shell_command": self.shellCommandTextEdit.toPlainText(),
+            "editor_file_path": self.editorFilePathLineEdit.text()
         }
         with open("./ssh_config.json", "w") as config_file:
             json.dump(ssh_config, config_file, indent=4)
@@ -428,6 +477,19 @@ class PlotInterface:
         self.frame.deleteLater()  # QFrame 삭제
         logging.info("Plot and interface deleted.")
 
+class CustomDockWidget(QDockWidget):
+    def __init__(self, title, parent=None):
+        super().__init__(title, parent)
+        self.setFeatures(QDockWidget.DockWidgetFeature.DockWidgetClosable | QDockWidget.DockWidgetFeature.DockWidgetMovable)
+
+    def closeEvent(self, event):
+        logging.info(f"Closing dock widget: {self.windowTitle()}")
+
+        # 연동된 PlotInterface가 있다면 삭제
+        if self.linkedInterface:
+            self.linkedInterface.delete()
+        super().closeEvent(event)
+
 def lisToCSV(path) -> None:
 
     """
@@ -449,8 +511,6 @@ def lisToCSV(path) -> None:
         logging.info(f"Converted {path} to {output_path}")
     except subprocess.CalledProcessError as e:
         logging.info(f"Error converting {path} to CSV: {e}")
-
-def getFileAndPlot():pass
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

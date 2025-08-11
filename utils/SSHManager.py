@@ -47,7 +47,7 @@ class SSHManager:
 
         return self.ssh.invoke_shell()
     
-    def execute_commands_over_shell(channel: paramiko.Channel, commands: list) -> None:
+    def execute_commands_over_shell(self, channel: paramiko.Channel, commands: list) -> None:
 
         """
         SSH 채널을 통해 명령어를 실행하는 함수
