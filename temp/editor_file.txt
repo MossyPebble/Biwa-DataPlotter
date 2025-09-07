@@ -18,7 +18,7 @@
 
 
 .param par_gate_offset_v = 0
-.param par_gate_ampl = 3
+.param par_gate_ampl = 4
 .param par_gate_freq = '1/par_period'
 .param par_gate_ini_delay = 0
 .param par_gate_damp_fact = 1

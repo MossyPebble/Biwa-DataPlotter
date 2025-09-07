@@ -3,7 +3,7 @@ from datetime import datetime
 import pyqtgraph as pg
 import pandas as pd
 from PyQt6.QtWidgets import (
-    QApplication, QMainWindow, QWidget, QSplitter, QVBoxLayout, QLabel, QDockWidget, QTabWidget, QLineEdit, QFormLayout, QPushButton, QMenu, QCheckBox, QGridLayout, QComboBox, QFrame, QTextEdit, QToolTip
+    QApplication, QMainWindow, QWidget, QSplitter, QVBoxLayout, QLabel, QDockWidget, QTabWidget, QLineEdit, QFormLayout, QPushButton, QMenu, QCheckBox, QGridLayout, QComboBox, QFrame, QTextEdit, QToolTip, QLabel
 )
 from PyQt6.QtGui import QAction
 from PyQt6.QtCore import Qt, QThread, pyqtSignal, QEvent
@@ -34,6 +34,7 @@ class MainWindow(QMainWindow):
         self.data = None
         self.dataColumnNames = None
         self.plotInterfaces = []  # PlotInterface 객체를 저장할 리스트
+        self.lastUpdatedTime = None
 
         # *************** 메뉴바 설정 **************
         menuBar = self.menuBar()
@@ -57,13 +58,13 @@ class MainWindow(QMainWindow):
         self.rightWidget = rightWidget
 
         # 왼쪽에 도크된 임시 그래프 A, B (A 위에 B가 쌓임)
-        dock_a = CustomDockWidget("Graph A", leftWidget)
+        dock_a = QDockWidget("Graph A", leftWidget)
         plot_a = pg.PlotWidget()
         dock_a.setWidget(plot_a)
         dock_a.setFloating(False)
         self.addDockWidget(Qt.DockWidgetArea.LeftDockWidgetArea, dock_a)
 
-        dock_b = CustomDockWidget("Graph B", leftWidget)
+        dock_b = QDockWidget("Graph B", leftWidget)
         plot_b = pg.PlotWidget()
         dock_b.setWidget(plot_b)
         dock_b.setFloating(False)
@@ -112,7 +113,14 @@ class MainWindow(QMainWindow):
         tab2Widget = QWidget()
         self.tabWidget.addTab(tab2Widget, "Plot Settings")
 
+       
         formLayout2 = QFormLayout(tab2Widget)
+
+        # 마지막 갱신 시간 표시
+        self.lastUpdatedLabel = QLabel("Never")
+        formLayout2.addRow("Last Updated:", self.lastUpdatedLabel)
+
+        # Add Graph 버튼
         formLayout2.addRow("", addGraphButton := QPushButton("Add Graph"))
         addGraphButton.clicked.connect(self.createPlotWidget)
         self.formLayout2 = formLayout2
@@ -175,6 +183,7 @@ class MainWindow(QMainWindow):
             return
 
         try:
+            self.showTooltip("Getting file...")
 
             # 파일 다운로드
             local_file_path = './temp/editor_file.txt'
@@ -184,7 +193,8 @@ class MainWindow(QMainWindow):
             with open(local_file_path, 'r', encoding='utf-8') as f:
                 content = f.read()
                 self.editorTextEdit.setPlainText(content)
-                logging.info(f"File loaded successfully: {file_path}")
+            logging.info(f"File loaded successfully: {file_path}")
+            self.showTooltip("File loaded successfully.")
         except Exception as e:
             logging.info(f"Error getting file: {e}")
 
@@ -199,10 +209,14 @@ class MainWindow(QMainWindow):
         try:
 
             # 현재 에디터 내용을 읽어 서버 측 경로로 저장
+            self.showTooltip("Saving file...")
+            logging.info(f"Saving file to: {file_path}")
             local_file_path = './temp/editor_file.txt'
             with open(local_file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
             self.ssh.put_file(local_file_path, file_path)
+            self.showTooltip("File saved successfully.")
+            logging.info(f"File saved successfully: {file_path}")
         except Exception as e:
             logging.info(f"Error saving file: {e}")
 
@@ -212,17 +226,19 @@ class MainWindow(QMainWindow):
             Shell Command를 실행하는 메서드
         """
 
-        command = self.shellCommandTextEdit.toPlainText().split('\n')
-        if not command:
+        commands = self.shellCommandTextEdit.toPlainText().split('\n')
+        if not commands:
             logging.info("Shell Command is empty.")
             return
         if not self.ssh:
             logging.info("SSH connection is not established.")
             return
+        
+        self.showTooltip("Executing shell command...")
 
         try:
             channel = self.ssh.invoke_shell()
-            self.ssh.execute_commands_over_shell(channel, command)
+            self.ssh.execute_commands_over_shell(channel, commands, no_output=True)
             channel.close()
         except Exception as e:
             logging.info(f"Error executing shell command: {e}")
@@ -284,6 +300,10 @@ class MainWindow(QMainWindow):
 
         logging.info(f"파일이 업데이트되었습니다: {remote_file_path}")
 
+        # 마지막 갱신 시간 기록
+        self.lastUpdatedTime = datetime.now()
+        self.lastUpdatedLabel.setText(self.lastUpdatedTime.strftime("%Y-%m-%d %H:%M:%S"))
+
         # 파일 다운로드 후 CSV 변환
         local_file_path = './temp/output.lis'
         self.ssh.get_file(remote_file_path, local_file_path)
@@ -305,30 +325,24 @@ class MainWindow(QMainWindow):
             plotInterface.dataColumnNames = self.dataColumnNames  # 컬럼 이름 전달
             plotInterface.updatePlot()
 
+        # 갱신 완료 알림
+        self.showTooltip("Data updated and plots refreshed.")
+
     def createPlotWidget(self):
 
         """
-            새로운 PlotWidget과 그 PlotWidget을 다루기 위한 interface를 만드는 함수
+            새로운 PlotDock과 그 PlotDock을 다루기 위한 interface를 만드는 함수
         """
 
-        # PlotWidget 생성
-        dock = CustomDockWidget(f"Graph {len(self.plotInterfaces) + 1}", self.leftWidget)
-        plot = pg.PlotWidget()
-        dock.setWidget(plot)
-        dock.setFloating(False)
+        # PlotDock 생성
+        dock = PlotDock(f"Graph {len(self.plotInterfaces) + 1}", self.leftWidget, self.data, self.dataColumnNames)
         self.addDockWidget(Qt.DockWidgetArea.LeftDockWidgetArea, dock)
 
-        # PlotInterface 객체 생성 및 관리
-        plotInterface = PlotInterface(plot, self.dataColumnNames)
-        plotInterface.data = self.data  # 데이터 전달
-        self.formLayout2.addRow("", plotInterface.frame)  # QFormLayout에 PlotInterface의 frame 추가
-        plotInterface.data = self.data  # 데이터 전달
-        self.plotInterfaces.append(plotInterface)  # PlotInterface를 리스트에 저장
+        # PlotInterface 관리
+        self.formLayout2.addRow("", dock.plotInterface.frame)  # QFormLayout에 PlotInterface의 frame 추가
+        self.plotInterfaces.append(dock.plotInterface)        # PlotInterface를 리스트에 저장
 
-        # Dock과 PlotInterface 연결 (제거 과정에서 필요)
-        dock.linkedInterface = plotInterface
-
-        return plotInterface
+        return dock.plotInterface
 
     def loadSettings(self):
 
@@ -392,7 +406,7 @@ class ServerFileWatcherThread(QThread):
             try:
             
                 # 서버에서 파일의 수정 시간 확인
-                command = f"stat -c %Y {self.remote_file_path}"  # 파일의 마지막 수정 시간 가져오기
+                command = f"stat -c %Y \"{self.remote_file_path}\""  # 파일의 마지막 수정 시간 가져오기
                 stdin, stdout, stderr = self.ssh_manager.ssh.exec_command(command)
                 current_modified_time = int(stdout.read().strip())
 
@@ -409,6 +423,8 @@ class PlotInterface:
     def __init__(self, plot, dataColumnNames):
         self.plot = plot
         self.dataColumnNames = dataColumnNames
+        self.plotColors = ['r', 'g', 'b', 'c', 'm', 'y', 'w']
+        self.plotColorsIndex = 0
 
         # frame 생성
         self.frame = QFrame()
@@ -459,12 +475,15 @@ class PlotInterface:
         self.plot.clear()
 
         # 선택된 데이터를 기반으로 그래프 그리기
+        self.plotColorsIndex = 0
         for y_data in y_data_columns:
             self.plot.plot(
                 self.data[x_data],  # X축 데이터
                 self.data[y_data],  # Y축 데이터
-                pen=pg.mkPen(color=(255, 0, 0), width=2)  # 스타일 설정
+                pen=pg.mkPen(self.plotColors[self.plotColorsIndex % len(self.plotColors)], width=2),
+                name=y_data
             )
+            self.plotColorsIndex += 1
         logging.info(f"Updating plot with X: {x_data}, Y: {y_data_columns}")
 
     def delete(self):
@@ -477,10 +496,20 @@ class PlotInterface:
         self.frame.deleteLater()  # QFrame 삭제
         logging.info("Plot and interface deleted.")
 
-class CustomDockWidget(QDockWidget):
-    def __init__(self, title, parent=None):
+class PlotDock(QDockWidget):
+    def __init__(self, title, parent=None, data=None, dataColumnNames=None):
         super().__init__(title, parent)
         self.setFeatures(QDockWidget.DockWidgetFeature.DockWidgetClosable | QDockWidget.DockWidgetFeature.DockWidgetMovable)
+        self.plotWidget = pg.PlotWidget()  # PlotWidget 생성
+        self.setWidget(self.plotWidget)   # PlotWidget을 도킹 위젯에 설정
+        self.setFloating(False)           # 도킹 위젯 고정
+
+        # PlotInterface 생성 및 연결
+        self.plotInterface = PlotInterface(self.plotWidget, dataColumnNames)
+        self.plotInterface.data = data  # 데이터 전달
+
+        # linkedInterface 속성 추가
+        self.linkedInterface = self.plotInterface
 
     def closeEvent(self, event):
         logging.info(f"Closing dock widget: {self.windowTitle()}")

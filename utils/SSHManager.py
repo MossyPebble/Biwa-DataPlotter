@@ -47,7 +47,7 @@ class SSHManager:
 
         return self.ssh.invoke_shell()
     
-    def execute_commands_over_shell(self, channel: paramiko.Channel, commands: list) -> None:
+    def execute_commands_over_shell(self, channel: paramiko.Channel, commands: list, no_output: bool=False) -> None:
 
         """
         SSH 채널을 통해 명령어를 실행하는 함수
@@ -55,6 +55,7 @@ class SSHManager:
         Args:
             channel (paramiko.Channel): SSH 채널
             commands (list): 실행할 명령어 리스트
+            no_output (bool, optional): 명령어 실행 결과를 출력하지 않을지 여부. 기본값은 False.
         """
 
         
@@ -63,13 +64,14 @@ class SSHManager:
             print(f"\nSending command: {command.strip()}")
             channel.send(command + " && echo '__END__'\n")
             
-            while True:
+            while not no_output:
                 if channel.recv_ready():
                     output += (recieved := channel.recv(2^20).decode('utf-8'))
                     print(recieved, end="")
                 else:
                     if "__END__" in output: break
                 time.sleep(0.1)
+            time.sleep(0.5)
 
     def get_file(self, src, dst) -> None:
 
