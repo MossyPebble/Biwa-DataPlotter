@@ -1,12 +1,12 @@
-import sys, os, subprocess, json, time
+import sys, os, subprocess, json, time, math
 from datetime import datetime
 import pyqtgraph as pg
 import pandas as pd
 from PyQt6.QtWidgets import (
-    QApplication, QMainWindow, QWidget, QSplitter, QVBoxLayout, QLabel, QDockWidget, QTabWidget, QLineEdit, QFormLayout, QPushButton, QMenu, QCheckBox, QGridLayout, QComboBox, QFrame, QTextEdit, QToolTip, QLabel
+    QApplication, QMainWindow, QWidget, QSplitter, QVBoxLayout, QLabel, QDockWidget, QTabWidget, QLineEdit, QFormLayout, QPushButton, QMenu, QCheckBox, QGridLayout, QComboBox, QFrame, QTextEdit, QToolTip, QLabel, QSlider
 )
 from PyQt6.QtGui import QAction
-from PyQt6.QtCore import Qt, QThread, pyqtSignal, QEvent
+from PyQt6.QtCore import Qt, QThread, pyqtSignal, QEvent, QTimer, QObject
 from PyQt6.QtGui import QFont, QShortcut, QKeySequence
 
 from utils.SSHManager import SSHManager
@@ -419,6 +419,38 @@ class ServerFileWatcherThread(QThread):
                 logging.info(f"Error watching file: {e}")
             time.sleep(1)  # 1초 간격으로 파일 감시
 
+class WheelToSliderFilter(QObject):
+    def __init__(self, slider: QSlider):
+        super().__init__()
+        self.slider = slider
+
+    def eventFilter(self, obj, event):
+        if event.type() == QEvent.Type.Wheel and self.slider is not None:
+            delta = event.angleDelta().y()
+            if delta == 0:
+                return False
+            notches = int(delta / 120)  # 1 notch = 120
+            minv = self.slider.minimum()
+            maxv = self.slider.maximum()
+            rng = max(1, maxv - minv)
+
+            # 기본 스텝: 범위의 1%
+            step = max(1, math.ceil(rng * 0.01))
+
+            # 가속도: Shift=5%, Ctrl=10%
+            mods = event.modifiers()
+            if mods & Qt.KeyboardModifier.ControlModifier:
+                step *= 10
+            elif mods & Qt.KeyboardModifier.ShiftModifier:
+                step *= 5
+
+            new_val = max(minv, min(maxv, self.slider.value() + notches * step))
+            if new_val != self.slider.value():
+                self.slider.setValue(new_val)
+            event.accept()
+            return True
+        return False
+
 class PlotInterface:
     def __init__(self, plot, dataColumnNames):
         self.plot = plot
@@ -453,7 +485,43 @@ class PlotInterface:
         self.xAxisComboBox.currentIndexChanged.connect(self.updatePlot)
         self.interfaceLayout.addWidget(self.xAxisComboBox)
 
-    def updatePlot(self, state=None, column=None):
+        # 데이터 길이 수동 설정
+        self.interfaceLayout.addWidget(QLabel("Data Length"))
+        self.lengthSlider = QSlider(Qt.Orientation.Horizontal)
+        self.lengthSlider.setMinimum(1)
+        self.lengthSlider.setMaximum(1)  # 데이터 로드 후 갱신
+        self.lengthSlider.setValue(1)
+        self.lengthSlider.setTickPosition(QSlider.TickPosition.NoTicks)
+
+        # 슬라이더 변경 시 라벨/플롯 갱신
+        self.lengthSlider.valueChanged.connect(self.onLengthSliderChanged)
+        self.interfaceLayout.addWidget(self.lengthSlider)
+
+        # 현재 n과 % 표시 라벨
+        self.lengthInfoLabel = QLabel("1 / 1 (100%)")
+        self.lengthInfoLabel.setAlignment(Qt.AlignmentFlag.AlignRight)
+        self.interfaceLayout.addWidget(self.lengthInfoLabel)
+
+        # 추가: PlotInterface 영역(프레임과 모든 자식)에서 휠 => 슬라이더 제어
+        self._wheelFilter = WheelToSliderFilter(self.lengthSlider)
+        self.frame.installEventFilter(self._wheelFilter)
+        for w in self.frame.findChildren(QWidget):
+            w.installEventFilter(self._wheelFilter)
+
+    # 슬라이더 변경 핸들러
+    def onLengthSliderChanged(self, value: int):
+        max_len = len(self.data) if getattr(self, "data", None) is not None else self.lengthSlider.maximum()
+        max_len = max(max_len, 1)
+        n = min(value, max_len)
+        self.updateLengthLabel(n, max_len)
+        self.updatePlot(setSliderMax=False)
+
+    # n, % 라벨 갱신
+    def updateLengthLabel(self, n: int, max_len: int):
+        pct = int(n / max_len * 100) if max_len > 0 else 0
+        self.lengthInfoLabel.setText(f"{n} / {max_len} ({pct}%)")
+
+    def updatePlot(self, state=None, column=None, setSliderMax=True):
 
         """
             Plot을 업데이트하는 메서드
@@ -470,6 +538,25 @@ class PlotInterface:
         if not y_data_columns:
             logging.info("Warning: No Y-axis data selected.")
             return
+        
+        # 슬라이더 최대치 데이터 길이에 맞추기
+        max_len = len(self.data)
+        if self.lengthSlider.maximum() != max_len:
+            self.lengthSlider.blockSignals(True)
+            self.lengthSlider.setMaximum(max_len)
+            if self.lengthSlider.value() > max_len:
+                self.lengthSlider.setValue(max_len)
+            self.lengthSlider.blockSignals(False)
+
+        n = min(self.lengthSlider.value(), max_len)
+        if n <= 0:
+            return
+        if setSliderMax:
+            self.lengthSlider.setValue(max_len)
+            n = max_len
+        
+        # n, % 라벨 갱신
+        self.updateLengthLabel(n, max_len)
 
         # PlotWidget 초기화
         self.plot.clear()
@@ -478,8 +565,8 @@ class PlotInterface:
         self.plotColorsIndex = 0
         for y_data in y_data_columns:
             self.plot.plot(
-                self.data[x_data],  # X축 데이터
-                self.data[y_data],  # Y축 데이터
+                self.data[x_data].iloc[:n],
+                self.data[y_data].iloc[:n],
                 pen=pg.mkPen(self.plotColors[self.plotColorsIndex % len(self.plotColors)], width=2),
                 name=y_data
             )
