@@ -1,0 +1,26 @@
+{
+    "host": "115.145.157.110",
+    "port": 22,
+    "userId": "user_r",
+    "key_path": "C:/Users/LG/.ssh/id_rsa.txt",
+    "shell_command": "cd \"/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/\"\nhspice test.sp -o output",
+    "editor_file_path": "",
+    "use_local_file": false,
+    "params_file_path": "/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/para_nmos_ref",
+    "params_output_file_name": "/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/para_nmos.sp",
+    "use_ctrl_s_for_params": true,
+    "favorite_params": [
+        "PHIG",
+        "TOXP",
+        "U0",
+        "UA",
+        "CIT"
+    ],
+    "data_path_history": [
+        "/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png",
+        "/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.lis",
+        "/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV.png",
+        "/home/user_r/User/CWS/Workspace/251203_JHK_send/IV/output/hnu.lis",
+        "/home/user_r/User/CWS/Workspace/251203_JHK_send/IV/SNU_OG.csv"
+    ]
+}
