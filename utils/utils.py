@@ -4,6 +4,10 @@ from PyQt6.QtWidgets import QLayout
 from PyQt6.QtGui import QImage
 import numpy as np
 
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from utils.SSHManager import SSHManager
+
 def qimage_to_rgba_numpy(img_path: str) -> np.ndarray:
 
     """
@@ -27,7 +31,7 @@ def qimage_to_rgba_numpy(img_path: str) -> np.ndarray:
     arr = arr[:, :, [2, 1, 0, 3]]
     return arr
 
-def lisToCSV(path) -> None:
+def lisToCSV(path: str) -> None:
 
     """
         .lis 파일을 CSV로 변환하는 함수입니다.

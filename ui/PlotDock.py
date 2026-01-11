@@ -173,43 +173,6 @@ class PlotDock(QDockWidget):
         menu.addAction(act)
         self._toggleHoverAction = act  # GC 방지/상태 유지용
 
-        # -----------------------------
-        # Image overlay 메뉴 추가
-        # -----------------------------
-        openAct = QAction("Overlay Image...", self)
-
-        def _openOverlay():
-            path, _ = QFileDialog.getOpenFileName(
-                self,
-                "Select image to overlay",
-                "",
-                "Images (*.png *.jpg *.jpeg *.bmp *.gif *.tif *.tiff);;All Files (*.*)",
-            )
-            if not path:
-                return
-
-            self._overlayPath = path
-
-            # 기본 배치: 현재 보이는 뷰 영역에 꽉 차게
-            vb2 = self.plotWidget.getPlotItem().getViewBox()
-            (x0, x1), (y0, y1) = vb2.viewRange()
-            self.showImageOverlay(path, x0=x0, y0=y0, w=(x1 - x0), h=(y1 - y0))
-
-        openAct.triggered.connect(_openOverlay)
-        menu.addAction(openAct)
-
-        clearAct = QAction("Clear Overlay Image", self)
-
-        def _clearOverlay():
-            self._overlayPath = None
-            self.clearImageOverlay()
-
-        clearAct.triggered.connect(_clearOverlay)
-        menu.addAction(clearAct)
-
-        self._overlayOpenAction = openAct   # GC 방지
-        self._overlayClearAction = clearAct # GC 방지
-
     def on_mouse_moved(self, evt):
         if not self.hoverEnabled: return
 

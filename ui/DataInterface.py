@@ -24,6 +24,7 @@ class DataInterface:
                 dataPathHistory (list[str]): 이전에 사용된 데이터 파일 경로 히스토리 리스트
         """
 
+        self.interface_id = id(self)
         self.ssh = ssh
         self.plotDocks = plotDocks
         self.lastRefreshTime = None
@@ -159,7 +160,7 @@ class DataInterface:
         
         # UI 및 플롯 갱신
         self.refreshDataUI()
-        self.updatePlot(setSliderMax=True)
+        self.updatePlot(setSliderMax=False)
 
         QApplication.restoreOverrideCursor()
         self.showTooltip("Data updated and UI refreshed.")
@@ -383,8 +384,9 @@ class DataInterface:
             # 데이터 슬라이더 생성
             self.interfaceLayout.addWidget(QLabel("Data Length"))
             self.lengthSlider = QSlider(Qt.Orientation.Horizontal)
-            self.lengthSlider.setMaximum(1)  # 데이터 로드 후 갱신
-            self.lengthSlider.setValue(1)
+            max_len = max(1, len(self.data) if getattr(self, "data", None) is not None else 1)
+            self.lengthSlider.setMinimum(1)
+            self.lengthSlider.setMaximum(max_len)
             self.lengthSlider.setTickPosition(QSlider.TickPosition.NoTicks)
 
             # 슬라이더 변경 시 라벨/플롯 갱신
@@ -518,6 +520,7 @@ class DataInterface:
                 dock.refreshPlot()
 
         self.frame.deleteLater()  # QFrame 삭제
+        self._label.deleteLater()  # 라벨 삭제
         logging.info("Plot deleted.")
 
     def showTooltip(self, message):

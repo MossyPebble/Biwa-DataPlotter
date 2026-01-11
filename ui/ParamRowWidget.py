@@ -1,16 +1,34 @@
-from PyQt6.QtWidgets import QWidget, QHBoxLayout, QPushButton, QLabel, QLineEdit
+from PyQt6.QtWidgets import QWidget, QHBoxLayout, QPushButton, QLabel, QLineEdit, QMenu
+from PyQt6.QtCore import Qt
 
 class ParamRowWidget(QWidget):
 
     """
         params 구조: params[key] == {"value": ..., "favorite": bool}
+
+        Args:
+            key (str): 파라미터 이름
+            params_ref (dict): 파라미터 사전 참조
+            on_fav_changed (callable, optional): favorite 상태 변경 시 호출할 콜백 함수
+            parent (QWidget, optional): 부모 위젯
     """
 
-    def __init__(self, key: str, params_ref: dict, on_fav_changed=None, parent=None):
+    def __init__(
+            self, 
+            key: str, 
+            params_ref: dict, 
+            on_fav_changed: 
+            callable=None, 
+            parent=None
+        ):
+
         super().__init__(parent)
         self.key = key
         self.params_ref = params_ref
         self.on_fav_changed = on_fav_changed  # favorite 바뀌면 재정렬용 콜백
+
+        # 초기값 저장
+        self.initValue = params_ref.get(key, {}).get("value", "")
 
         self.layout = QHBoxLayout(self)
         self.layout.setContentsMargins(0, 0, 0, 0)
@@ -45,7 +63,21 @@ class ParamRowWidget(QWidget):
         self.layout.addWidget(self.b_p5)
         self.layout.addWidget(self.b_p10)
 
+        # 우클릭 메뉴
+        self.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
+        self.customContextMenuRequested.connect(self.showMouseRightClickMenu)
+
         self.refresh_from_model()
+
+    def showMouseRightClickMenu(self, pos): 
+        menu = QMenu(self)
+
+        menu.addAction('Reset to Reference', lambda: self.valueEdit.setText(str(self.initValue)))
+        menu.addSeparator()
+        menu.addAction("Set as Favorite", lambda: self.favBtn.setChecked(True))
+        menu.addAction("Unset Favorite", lambda: self.favBtn.setChecked(False))
+
+        menu.exec(self.mapToGlobal(pos))
 
     def refresh_from_model(self):
         entry = self.params_ref.get(self.key, {})

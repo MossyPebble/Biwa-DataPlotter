@@ -2,9 +2,7 @@ import paramiko, time
 
 class SSHManager:
     
-    """
-    어떤 ssh 서버에 접속하고 그 안에서 명령어 실행, 파일 송수신을 담당하는 클래스
-    """
+    """어떤 ssh 서버에 접속하고 그 안에서 명령어 실행, 파일 송수신을 담당하는 클래스"""
 
     def __init__(self, host, port, userId, key_path=None, password=None) -> None:
         """
@@ -47,29 +45,28 @@ class SSHManager:
 
         return self.ssh.invoke_shell()
     
-    def execute_commands_over_shell(self, channel: paramiko.Channel, commands: list, no_output: bool=False) -> None:
+    def execute_commands_over_shell(self, channel: paramiko.Channel, commands: list, no_output: bool=False) -> None | str:
 
         """
-        SSH 채널을 통해 명령어를 실행하는 함수
+            SSH 채널을 통해 명령어를 실행하는 함수
 
-        Args:
-            channel (paramiko.Channel): SSH 채널
-            commands (list): 실행할 명령어 리스트
-            no_output (bool, optional): 명령어 실행 결과를 출력하지 않을지 여부. 기본값은 False.
+            Args:
+                channel (paramiko.Channel): SSH 채널
+                commands (list): 실행할 명령어 리스트
+                no_output (bool, optional): 명령어 실행 결과를 반환할지 여부. 기본값은 False.
         """
 
-        
+        stopSignal = '__END__'
         for command in commands:
             output = ""
             print(f"\nSending command: {command.strip()}")
-            channel.send(command + " && echo '__END__'\n")
+            channel.send(command + f" && echo {stopSignal}\n")
             
             while not no_output:
                 if channel.recv_ready():
                     output += (recieved := channel.recv(2^20).decode('utf-8'))
-                    print(recieved, end="")
                 else:
-                    if "__END__" in output: break
+                    if stopSignal in output: return output.replace(stopSignal, "")
                 time.sleep(0.1)
             time.sleep(0.5)
 
