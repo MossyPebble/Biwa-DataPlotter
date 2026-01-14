@@ -125,25 +125,28 @@ def patch_modelcard_content_inplace(
     insert_missing: bool = False,
     insert_after_line_contains: str | None = None
 ) -> str:
-    
     """
-        template_content 안에서 params에 있는 key들의 value만 '기존 위치에서' 교체.
-        - '*'로 시작하는 주석 줄은 그대로 유지.
-        - section 지정 시: start_marker ~ end_marker 사이에서만 교체.
-        - insert_missing=True면: 파일에 없던 key는 +key = value 형태로 삽입 가능.
+    template_content 안에서 params에 있는 key들의 value만 '기존 위치에서' 교체.
+    - '*'로 시작하는 주석 줄은 그대로 유지.
+    - section 지정 시: start_marker ~ end_marker 사이에서만 교체.
+    - insert_missing=True면: 파일에 없던 key는 +key = value 형태로 삽입 가능.
+
+    NOTE: 대소문자 구분(Case-Sensitive) 매칭
     """
 
     lines = template_content.splitlines(True)  # keep line endings
 
-    params_lc = {k.lower(): str(v) for k, v in params.items()}
-    keys = sorted(params_lc.keys(), key=len, reverse=True)
+    # 대소문자 구분: 키를 그대로 사용
+    params_cs = {k: str(v) for k, v in params.items()}
+    keys = sorted(params_cs.keys(), key=len, reverse=True)
     if not keys:
         return template_content
 
     key_alt = "|".join(re.escape(k) for k in keys)
+
+    # 대소문자 구분: IGNORECASE 제거
     pattern = re.compile(
-        rf'(?P<plus>\+)?(?P<key>{key_alt})(?P<ws1>\s*)=(?P<ws2>\s*)(?P<val>[^\s]+)',
-        re.IGNORECASE
+        rf'(?P<plus>\+)?(?P<key>{key_alt})(?P<ws1>\s*)=(?P<ws2>\s*)(?P<val>[^\s]+)'
     )
 
     in_section = (section is None)
@@ -151,15 +154,14 @@ def patch_modelcard_content_inplace(
     found: set[str] = set()
 
     def repl(m: re.Match) -> str:
-        key_in_file = m.group("key")
-        key_lc = key_in_file.lower()
-        if key_lc in params_lc:
-            found.add(key_lc)
+        key_in_file = m.group("key")  # regex가 params의 key들만 매칭하므로 그대로 사용 가능
+        if key_in_file in params_cs:
+            found.add(key_in_file)
             return (
                 (m.group("plus") or "") +
                 key_in_file +
                 m.group("ws1") + "=" + m.group("ws2") +
-                params_lc[key_lc]
+                params_cs[key_in_file]
             )
         return m.group(0)
 
@@ -185,7 +187,7 @@ def patch_modelcard_content_inplace(
     if insert_missing:
         missing = [k for k in keys if k not in found]
         if missing:
-            insert_block = "".join(f"+{k} = {params_lc[k]}\n" for k in missing)
+            insert_block = "".join(f"+{k} = {params_cs[k]}\n" for k in missing)
 
             if insert_after_line_contains:
                 new_out: list[str] = []
@@ -206,7 +208,7 @@ def fmt_hybrid(v: float,
                fixed_digits: int = 6,   # 일반표기에서 소수자리(최대)
                sci_min_exp: int = -3,   # 10^(-3) 보다 작으면 scientific
                sci_max_exp: int = 6,    # 10^(6)  이상이면 scientific
-               trim_zeros: bool = True # 1.230000 -> 1.23
+               trim_zeros: bool = True  # 1.230000 -> 1.23
                ) -> str:
     # 특수값
     if not math.isfinite(v):

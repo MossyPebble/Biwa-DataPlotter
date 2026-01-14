@@ -4,12 +4,33 @@
     "userIdLineEdit": "user_r",
     "keyPathLineEdit": "C:/Users/LG/.ssh/id_rsa.txt",
     "editorFilePathLineEdit": "",
-    "paramsFilePathLineEdit": "/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/para_nmos.sp",
+    "paramsFilePathLineEdit": "/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/para_nmos_ref",
     "outputParamsFileNameLineEdit": "/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/para_nmos.sp",
-    "shellCommandTextEdit": "cd \"/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/\"\nhspice test.sp -o output",
+    "shellCommandTextEdit": "bash \"/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/run.sh\"",
     "useCtrlSForParamsCheckBox": true,
-    "favorite_params": [],
+    "favorite_params": [
+        "EU",
+        "PHIG",
+        "CDSC",
+        "DVT0",
+        "CIT",
+        "RDSW",
+        "EOT",
+        "ETAMOB",
+        "DVT1",
+        "U0",
+        "CGSO",
+        "ETA0",
+        "UA",
+        "UD",
+        "CDSCD",
+        "TOXP"
+    ],
     "data_path_history": [
-        "/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.lis"
+        "/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/1\u31377.csv",
+        "/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png",
+        "/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv",
+        "/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.lis",
+        "/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/temp.csv"
     ]
 }

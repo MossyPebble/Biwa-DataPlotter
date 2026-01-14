@@ -43,7 +43,7 @@ class ParamRowWidget(QWidget):
 
         self.valueEdit = QLineEdit()
         self.valueEdit.setMinimumWidth(120)
-        self.valueEdit.editingFinished.connect(self._commit_value)
+        self.valueEdit.textChanged.connect(self._commit_value)
 
         self.b_m10 = QPushButton("-10%"); self.b_m10.setFixedWidth(70)
         self.b_m5  = QPushButton("-5%");  self.b_m5.setFixedWidth(70)
@@ -93,7 +93,7 @@ class ParamRowWidget(QWidget):
         self.params_ref[self.key]["favorite"] = bool(checked)
         if callable(self.on_fav_changed): self.on_fav_changed()
 
-    def _commit_value(self): self.params_ref[self.key]["value"] = self.valueEdit.text().strip()
+    def _commit_value(self, text: str): self.params_ref[self.key]["value"] = text
 
     def _apply_percent(self, percent: float):
         raw = self.valueEdit.text().strip()

@@ -28,11 +28,11 @@ if TYPE_CHECKING:
 
 # 로거 기본 설정
 logging.basicConfig(
-    level=logging.INFO,                                             # INFO 이상 레벨만 기록
+    level=logging.INFO,                                          
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
-        logging.FileHandler("log.txt", mode="a", encoding="utf-8"), # 파일에 append
-        logging.StreamHandler()                                     # 콘솔에도 출력
+        logging.FileHandler(f'./log/{datetime.now().strftime("%Y%m%d_%H%M%S")}_log.txt', mode="a", encoding="utf-8"),
+        logging.StreamHandler()
     ]
 )
 
@@ -253,11 +253,10 @@ class MainWindow(QMainWindow):
         
         self.showTooltip("Executing shell command...")
 
-        try:
-            channel = self.ssh.invoke_shell()
-            self.ssh.execute_commands_over_shell(channel, commands, no_output=False)
-            channel.close()
-        except Exception as e: logging.info(f"Error executing shell command: {e}")
+        channel = self.ssh.invoke_shell()
+        # self.ssh.execute_commands_over_shell(channel, commands, no_output=False)
+        self.ssh.send_command(commands[0])
+        channel.close()
 
     def onFileUpdated(self, remote_file_path: str):
 

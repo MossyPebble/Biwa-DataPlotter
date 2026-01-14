@@ -1,4 +1,4 @@
-import paramiko, time
+import paramiko, time, logging, uuid
 
 class SSHManager:
     
@@ -45,30 +45,39 @@ class SSHManager:
 
         return self.ssh.invoke_shell()
     
-    def execute_commands_over_shell(self, channel: paramiko.Channel, commands: list, no_output: bool=False) -> None | str:
+    def execute_commands_over_shell(self, channel, commands, no_output=False, timeout_s=600):
+        full_output = ""
 
-        """
-            SSH 채널을 통해 명령어를 실행하는 함수
-
-            Args:
-                channel (paramiko.Channel): SSH 채널
-                commands (list): 실행할 명령어 리스트
-                no_output (bool, optional): 명령어 실행 결과를 반환할지 여부. 기본값은 False.
-        """
-
-        stopSignal = '__END__'
         for command in commands:
-            output = ""
+            token = f"__END__{uuid.uuid4().hex}"
+            cmd = f"{command}; echo {token}\n"
+
             print(f"\nSending command: {command.strip()}")
-            channel.send(command + f" && echo {stopSignal}\n")
-            
-            while not no_output:
+            channel.send(cmd)
+
+            if no_output:
+                continue
+
+            buf = ""
+            start = time.time()
+
+            while True:
                 if channel.recv_ready():
-                    output += (recieved := channel.recv(2^20).decode('utf-8'))
+                    chunk = channel.recv(2**15).decode("utf-8", errors="replace")
+                    buf += chunk
+                    print(chunk, end="")
+
+                    # ✅ chunk 받은 직후에도 토큰 검사
+                    if token in buf:
+                        before, _ = buf.split(token, 1)
+                        full_output += before
+                        break
                 else:
-                    if stopSignal in output: return output.replace(stopSignal, "")
-                time.sleep(0.1)
-            time.sleep(0.5)
+                    if time.time() - start > timeout_s:
+                        raise TimeoutError(f"Timeout waiting for command to finish: {command!r}")
+                    time.sleep(0.05)
+
+        return full_output
 
     def get_file(self, src, dst) -> None:
 

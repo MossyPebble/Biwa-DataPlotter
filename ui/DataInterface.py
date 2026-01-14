@@ -1,5 +1,5 @@
 import logging, math, os, time
-from PyQt6.QtWidgets import QFrame, QVBoxLayout, QGridLayout, QLabel, QCheckBox, QComboBox, QSlider, QWidget, QLineEdit, QPushButton, QFormLayout, QToolTip, QApplication
+from PyQt6.QtWidgets import QFrame, QVBoxLayout, QGridLayout, QLabel, QCheckBox, QComboBox, QSlider, QWidget, QLineEdit, QPushButton, QFormLayout, QToolTip, QApplication, QGroupBox
 from PyQt6.QtCore import QEvent, QObject, Qt
 import pyqtgraph as pg
 import pandas as pd, numpy as np
@@ -29,7 +29,21 @@ class DataInterface:
         self.plotDocks = plotDocks
         self.lastRefreshTime = None
         self.dataPathHistory = dataPathHistory
+        self.dataHistory = []
         self.fileType = None
+
+        self.storeLineEditComponents = [
+            'showPastDataLineEdit',
+            'x0PosLineEdit',
+            'y0PosLineEdit',
+            'x1PosLineEdit',
+            'opacityLineEdit',
+        ]
+
+        self.storeComboBoxComponents = [
+            'plotSelectComboBox',
+            'xAxisComboBox',
+        ]
 
         # UI 변수
         self.path = ''
@@ -134,14 +148,14 @@ class DataInterface:
             if local_path.lower().endswith(".csv"):
                 self.fileType = "csv"
                 self.data = pd.read_csv(local_path)
-                self.dataColumnNames = self.data.columns.tolist()
-                logging.info(f"DataInterface: Data loaded with columns: {self.dataColumnNames}")
+                self.dataHistory.append(self.data)
+                logging.info(f"DataInterface: Data loaded with columns: {self.data.columns.tolist()}")
             elif local_path.lower().endswith(".lis"):
                 self.fileType = "lis"
                 lisToCSV(local_path)
                 self.data = pd.read_csv(local_path[:-4] + ".csv")
-                self.dataColumnNames = self.data.columns.tolist()
-                logging.info(f"DataInterface: Data loaded with columns: {self.dataColumnNames}")
+                self.dataHistory.append(self.data)
+                logging.info(f"DataInterface: Data loaded with columns: {self.data.columns.tolist()}")
 
             # png 지원
             elif local_path.lower().endswith(".png"):
@@ -166,47 +180,25 @@ class DataInterface:
         self.showTooltip("Data updated and UI refreshed.")
 
     def _captureUIState(self) -> dict:
-        state = {
-            "selected_dock_title": None,
-            "selected_dock_obj": None,
-            "x_column": None,
-            "checked_y": set(),
-            "show_past": True,
-            "slider_value": None,
+        
+        state = {}
 
-            # ✅ PNG용 상태
-            "img_x0": None,
-            "img_y0": None,
-            "img_x1": None,
-            "img_y1": None,
-            "img_opacity": None,
-        }
+        for comp in self.storeLineEditComponents:
+            if hasattr(self, comp) and getattr(self, comp) is not None:
+                state[comp] = getattr(self, comp).text()
 
-        if hasattr(self, "plotSelectComboBox") and self.plotSelectComboBox is not None:
-            state["selected_dock_obj"] = self.plotSelectComboBox.currentData()
-            state["selected_dock_title"] = self.plotSelectComboBox.currentText()
-
-        if hasattr(self, "xAxisComboBox") and self.xAxisComboBox is not None:
-            state["x_column"] = self.xAxisComboBox.currentText()
+        for comp in self.storeComboBoxComponents:
+            if hasattr(self, comp) and getattr(self, comp) is not None:
+                state[comp] = getattr(self, comp).currentText()
 
         if hasattr(self, "yAxisCheckBoxes") and self.yAxisCheckBoxes is not None:
             state["checked_y"] = {cb.text() for cb in self.yAxisCheckBoxes if cb.isChecked()}
 
-        if hasattr(self, "showPastDataCheckBox") and self.showPastDataCheckBox is not None:
-            state["show_past"] = self.showPastDataCheckBox.isChecked()
+        if hasattr(self, "showPastDataGroup") and self.showPastDataGroup is not None:
+            state["show_past_checked"] = self.showPastDataGroup.isChecked()
 
         if hasattr(self, "lengthSlider") and self.lengthSlider is not None:
             state["slider_value"] = self.lengthSlider.value()
-
-        # ✅ PNG 입력값 저장(문자열 그대로 저장하면 round-trip이 쉬움)
-        if hasattr(self, "x0PosLineEdit") and self.x0PosLineEdit is not None:
-            state["img_x0"] = self.x0PosLineEdit.text()
-        if hasattr(self, "y0PosLineEdit") and self.y0PosLineEdit is not None:
-            state["img_y0"] = self.y0PosLineEdit.text()
-        if hasattr(self, "x1PosLineEdit") and self.x1PosLineEdit is not None:
-            state["img_x1"] = self.x1PosLineEdit.text()
-        if hasattr(self, "opacityLineEdit") and self.opacityLineEdit is not None:
-            state["img_opacity"] = self.opacityLineEdit.text()
 
         return state
 
@@ -216,43 +208,29 @@ class DataInterface:
             refreshDataUI 이후 새로 만들어진 UI에 저장된 상태를 복원
         """
 
-        # PlotDock 선택 복원(가능하면 객체로, 아니면 title로)
-        if hasattr(self, "plotSelectComboBox") and self.plotSelectComboBox is not None:
-            self.plotSelectComboBox.blockSignals(True)
-            try:
-                restored = False
-                prev_obj = state.get("selected_dock_obj")
-                if prev_obj is not None:
-                    for i in range(self.plotSelectComboBox.count()):
-                        if self.plotSelectComboBox.itemData(i) is prev_obj:
-                            self.plotSelectComboBox.setCurrentIndex(i)
-                            restored = True
-                            break
+        for comp in self.storeLineEditComponents:
+            if hasattr(self, comp) and getattr(self, comp) is not None and state.get(comp) is not None:
+                line_edit: QLineEdit = getattr(self, comp)
+                line_edit.blockSignals(True)
+                line_edit.setText(state[comp])
+                line_edit.blockSignals(False)
 
-                if not restored:
-                    prev_title = state.get("selected_dock_title")
-                    if prev_title:
-                        idx = self.plotSelectComboBox.findText(prev_title)
-                        if idx >= 0:
-                            self.plotSelectComboBox.setCurrentIndex(idx)
-            finally:
-                self.plotSelectComboBox.blockSignals(False)
-
-        # X 축 복원
-        if hasattr(self, "xAxisComboBox") and self.xAxisComboBox is not None:
-            prev_x = state.get("x_column")
-            if prev_x:
-                idx = self.xAxisComboBox.findText(prev_x)
+        for comp in self.storeComboBoxComponents:
+            if hasattr(self, comp) and getattr(self, comp) is not None and state.get(comp) is not None:
+                combo_box: QComboBox = getattr(self, comp)
+                idx = combo_box.findText(state[comp])
                 if idx >= 0:
-                    self.xAxisComboBox.blockSignals(True)
-                    self.xAxisComboBox.setCurrentIndex(idx)
-                    self.xAxisComboBox.blockSignals(False)
+                    combo_box.blockSignals(True)
+                    combo_box.setCurrentIndex(idx)
+                    combo_box.blockSignals(False)
 
         # Show past 복원
-        if hasattr(self, "showPastDataCheckBox") and self.showPastDataCheckBox is not None:
-            self.showPastDataCheckBox.blockSignals(True)
-            self.showPastDataCheckBox.setChecked(bool(state.get("show_past", True)))
-            self.showPastDataCheckBox.blockSignals(False)
+        if hasattr(self, "showPastDataGroup") and self.showPastDataGroup is not None:
+            prev_checked = state.get("show_past_checked")
+            if prev_checked is not None:
+                self.showPastDataGroup.blockSignals(True)
+                self.showPastDataGroup.setChecked(prev_checked)
+                self.showPastDataGroup.blockSignals(False)
 
         # Y 체크박스 복원 (이름 매칭)
         checked_y = state.get("checked_y") or set()
@@ -272,18 +250,6 @@ class DataInterface:
                 self.lengthSlider.blockSignals(True)
                 self.lengthSlider.setValue(v)
                 self.lengthSlider.blockSignals(False)
-
-        # ✅ PNG 입력값 복원
-        if hasattr(self, "x0PosLineEdit") and self.x0PosLineEdit is not None and state.get("img_x0") is not None:
-            self.x0PosLineEdit.setText(str(state["img_x0"]))
-        if hasattr(self, "y0PosLineEdit") and self.y0PosLineEdit is not None and state.get("img_y0") is not None:
-            self.y0PosLineEdit.setText(str(state["img_y0"]))
-        if hasattr(self, "x1PosLineEdit") and self.x1PosLineEdit is not None and state.get("img_x1") is not None:
-            self.x1PosLineEdit.setText(str(state["img_x1"]))
-        if hasattr(self, "y1PosLineEdit") and self.y1PosLineEdit is not None and state.get("img_y1") is not None:
-            self.y1PosLineEdit.setText(str(state["img_y1"]))
-        if hasattr(self, "opacityLineEdit") and self.opacityLineEdit is not None and state.get("img_opacity") is not None:
-            self.opacityLineEdit.setText(str(state["img_opacity"]))
 
     def refreshDataUI(self):
 
@@ -357,10 +323,25 @@ class DataInterface:
 
         elif self.fileType == "csv" or self.fileType == "lis":
 
-            # 과거 데이터 보이기 체크박스 생성
-            self.showPastDataCheckBox = QCheckBox("Show Past Data")
-            self.showPastDataCheckBox.setChecked(True)
-            self.interfaceLayout.addWidget(self.showPastDataCheckBox)
+            # 과거 데이터 보이기 그룹 생성
+            self.showPastDataGroup = QGroupBox("Show Past Data")
+            self.interfaceLayout.addWidget(self.showPastDataGroup)
+            self.showPastDataGroup.setCheckable(True)
+            self.showPastDataGroup.setChecked(False)
+
+            # 그룹 내부 컨텐츠 위젯
+            self.pastDataContent = QWidget()
+            self.pastDataLayout = QVBoxLayout(self.pastDataContent)
+            self.showPastDataGroup.setLayout(QVBoxLayout())
+            self.showPastDataGroup.layout().addWidget(self.pastDataContent)
+
+            # 접기/펼치기: 보이기/숨기기
+            self.pastDataContent.setVisible(False)
+            self.showPastDataGroup.toggled.connect(self.pastDataContent.setVisible)
+            self.pastDataLayout.addWidget(QLabel("0 = none, max is 10, seperated by commas."))
+            self.showPastDataLineEdit = QLineEdit("0")
+            self.showPastDataLineEdit.editingFinished.connect(self.updatePlot)
+            self.pastDataLayout.addWidget(self.showPastDataLineEdit)
 
             # y축 데이터 체크박스 생성
             self.yAxisCheckBoxes = []
@@ -368,7 +349,7 @@ class DataInterface:
             self.interfaceLayout.addWidget(QLabel("Y-Axis Data"))
             self.interfaceLayout.addLayout(self.yAxisCheckBoxLayout)
 
-            for i, column in enumerate(self.dataColumnNames):
+            for i, column in enumerate(self.data.columns.tolist()):
                 checkbox = QCheckBox(column)
                 checkbox.stateChanged.connect(self.updatePlot)
                 self.yAxisCheckBoxLayout.addWidget(checkbox, i // 3, i % 3)
@@ -377,7 +358,7 @@ class DataInterface:
             # x축 데이터 콤보박스 생성
             self.interfaceLayout.addWidget(QLabel("X-Axis Data"))
             self.xAxisComboBox = QComboBox()
-            self.xAxisComboBox.addItems(self.dataColumnNames)
+            self.xAxisComboBox.addItems(self.data.columns.tolist())
             self.xAxisComboBox.currentIndexChanged.connect(self.updatePlot)
             self.interfaceLayout.addWidget(self.xAxisComboBox)
 
@@ -472,7 +453,7 @@ class DataInterface:
 
             # x축 데이터 가져오기
             x_data = self.xAxisComboBox.currentText()
-            if x_data not in self.dataColumnNames:
+            if x_data not in self.data.columns.tolist():
                 logging.info(f"Error: X-axis data '{x_data}' not found in columns.")
                 return
 
@@ -496,8 +477,30 @@ class DataInterface:
             # n, % 라벨 갱신
             self.updateLengthLabel(n, max_len)
 
-            x = self.data[x_data].iloc[:n]
+            x: pd.DataFrame = self.data[x_data].iloc[:n]
             ys = {y_name: self.data[y_name].iloc[:n] for y_name in y_data_columns}
+
+            # 과거 데이터 포함 여부
+            if self.showPastDataGroup.isChecked():
+                
+                # y_data_columns에 있는 경우만 과거 데이터 추가
+                past_indices_str = self.showPastDataLineEdit.text().strip()
+                if past_indices_str:
+                    past_indices = []
+                    for part in past_indices_str.split(','):
+                        part = part.strip()
+                        if part.isdigit():
+                            idx = int(part)
+                            if 0 < idx < len(self.dataHistory):
+                                past_indices.append(idx)
+                    for idx in past_indices:
+                        past_data = self.dataHistory[-(idx + 1)]
+                        if x_data in past_data.columns.tolist():
+                            past_x = past_data[x_data].iloc[:n]
+                            for y_name in y_data_columns:
+                                if y_name in past_data.columns.tolist():
+                                    past_y = past_data[y_name].iloc[:n]
+                                    ys[f"{y_name} (past {idx})"] = past_y
 
             sendingData['x'] = x
             sendingData['ys'] = ys
