@@ -1,0 +1,57 @@
+2026-01-14 13:13:17,655 [INFO] Connected (version 2.0, client OpenSSH_7.4)
+2026-01-14 13:13:17,741 [INFO] Authentication (publickey) successful!
+2026-01-14 13:13:17,948 [INFO] [chan 0] Opened sftp connection (server version 3)
+2026-01-14 13:13:17,948 [INFO] SSH 연결 성공
+2026-01-14 13:13:19,827 [INFO] Params loaded (remote): /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/origial/BSIM_CMG_Parameter.txt
+2026-01-14 13:13:21,370 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 13:13:21,435 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 13:14:16,119 [INFO] DataInterface created. Total interfaces: 1
+2026-01-14 13:14:18,927 [INFO] DataInterface: history updated with path: ['/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/1ㄷ7.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.lis', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/temp.csv']
+2026-01-14 13:14:18,927 [INFO] DataInterface: File path set to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png
+2026-01-14 13:14:19,054 [INFO] 마지막 수정 시간: 2026-01-09 09:45:35
+2026-01-14 13:14:19,054 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png
+2026-01-14 13:14:19,054 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png
+2026-01-14 13:14:19,181 [INFO] DataInterface: File downloaded to: ./temp/IV_modified.png
+2026-01-14 13:14:19,197 [INFO] Plotted PNG overlay for interface 2791998757552, position=(0.0, 0.0, 894.0, 831.0), opacity=1.0
+2026-01-14 13:14:22,127 [INFO] Plotted PNG overlay for interface 2791998757552, position=(-2.0, 0.0, 894.0, 831.0), opacity=1.0
+2026-01-14 13:14:22,784 [INFO] Plotted PNG overlay for interface 2791998757552, position=(-2.0, 0.0, 2.0, 831.0), opacity=1.0
+2026-01-14 13:14:24,898 [INFO] Plotted PNG overlay for interface 2791998757552, position=(-2.0, -6.0, 2.0, 831.0), opacity=1.0
+2026-01-14 13:14:26,290 [INFO] Plotted PNG overlay for interface 2791998757552, position=(-2.0, -6.0, 2.0, -11.0), opacity=1.0
+2026-01-14 13:14:28,517 [INFO] DataInterface created. Total interfaces: 2
+2026-01-14 13:14:33,365 [INFO] DataInterface: history updated with path: ['/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/1ㄷ7.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.lis', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/temp.csv']
+2026-01-14 13:14:33,365 [INFO] DataInterface: File path set to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:14:33,519 [INFO] 마지막 수정 시간: 2026-01-14 13:13:24
+2026-01-14 13:14:33,519 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:14:33,519 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:14:33,694 [INFO] DataInterface: File downloaded to: ./temp/output.csv
+2026-01-14 13:14:33,719 [INFO] DataInterface: Data loaded with columns: ['time', 'current r1', 'current r2', 'current vbl', 'current vwl', 'time.1', 'current mn1', 'voltage 0', 'voltage wl', 'voltage fwl', 'time.2', 'voltage q_v', 'voltage n_d', 'voltage n_s', 'voltage bl']
+2026-01-14 13:14:33,726 [INFO] Plotted PNG overlay for interface 2791998757552, position=(-2.0, -6.0, 2.0, -11.0), opacity=1.0
+2026-01-14 13:14:36,406 [INFO] Plotted PNG overlay for interface 2791998757552, position=(-2.0, -6.0, 2.0, -11.0), opacity=1.0
+2026-01-14 13:14:36,406 [INFO] Plotted PNG overlay for interface 2791998757552, position=(-2.0, -6.0, 2.0, -11.0), opacity=1.0
+2026-01-14 13:14:37,259 [INFO] Plotted PNG overlay for interface 2791998757552, position=(-2.0, -6.0, 2.0, -11.0), opacity=1.0
+2026-01-14 13:15:14,729 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 13:15:14,801 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 13:15:17,052 [INFO] 마지막 수정 시간: 2026-01-14 13:15:17
+2026-01-14 13:15:17,054 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:15:17,054 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:15:17,144 [INFO] DataInterface: File downloaded to: ./temp/output.csv
+2026-01-14 13:15:17,165 [INFO] DataInterface: Data loaded with columns: ['time', 'current r1', 'current r2', 'current vbl', 'current vwl', 'time.1', 'current mn1', 'voltage 0', 'voltage wl', 'voltage fwl', 'time.2', 'voltage q_v', 'voltage n_d', 'voltage n_s', 'voltage bl']
+2026-01-14 13:15:17,176 [INFO] Plotted PNG overlay for interface 2791998757552, position=(-2.0, -6.0, 2.0, -11.0), opacity=1.0
+2026-01-14 13:15:20,247 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 13:15:20,315 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 13:15:21,724 [INFO] 마지막 수정 시간: 2026-01-14 13:15:22
+2026-01-14 13:15:21,724 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:15:21,724 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:15:21,835 [INFO] DataInterface: File downloaded to: ./temp/output.csv
+2026-01-14 13:15:21,851 [INFO] DataInterface: Data loaded with columns: ['time', 'current r1', 'current r2', 'current vbl', 'current vwl', 'time.1', 'current mn1', 'voltage 0', 'voltage wl', 'voltage fwl', 'time.2', 'voltage q_v', 'voltage n_d', 'voltage n_s', 'voltage bl']
+2026-01-14 13:15:21,851 [INFO] Plotted PNG overlay for interface 2791998757552, position=(-2.0, -6.0, 2.0, -11.0), opacity=1.0
+2026-01-14 13:15:45,271 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 13:15:45,327 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 13:15:47,293 [INFO] 마지막 수정 시간: 2026-01-14 13:15:48
+2026-01-14 13:15:47,293 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:15:47,293 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:15:47,371 [INFO] DataInterface: File downloaded to: ./temp/output.csv
+2026-01-14 13:15:47,387 [INFO] DataInterface: Data loaded with columns: ['time', 'current r1', 'current r2', 'current vbl', 'current vwl', 'time.1', 'current mn1', 'voltage 0', 'voltage wl', 'voltage fwl', 'time.2', 'voltage q_v', 'voltage n_d', 'voltage n_s', 'voltage bl']
+2026-01-14 13:15:47,403 [INFO] Plotted PNG overlay for interface 2791998757552, position=(-2.0, -6.0, 2.0, -11.0), opacity=1.0
+2026-01-14 13:16:57,909 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 13:16:57,953 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt

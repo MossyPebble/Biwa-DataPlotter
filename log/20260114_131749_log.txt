@@ -1,0 +1,86 @@
+2026-01-14 13:17:49,611 [INFO] Connected (version 2.0, client OpenSSH_7.4)
+2026-01-14 13:17:49,694 [INFO] Authentication (publickey) successful!
+2026-01-14 13:17:49,929 [INFO] [chan 0] Opened sftp connection (server version 3)
+2026-01-14 13:17:49,929 [INFO] SSH 연결 성공
+2026-01-14 13:18:03,536 [INFO] DataInterface created. Total interfaces: 1
+2026-01-14 13:18:05,426 [INFO] Params loaded (remote): /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/origial/BSIM_CMG_Parameter.txt
+2026-01-14 13:18:06,424 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 13:18:06,496 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 13:26:54,415 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 13:26:54,509 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 13:42:36,274 [INFO] DataInterface: history updated with path: ['/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/1ㄷ7.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.lis', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/temp.csv']
+2026-01-14 13:42:36,274 [INFO] DataInterface: File path set to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png
+2026-01-14 13:42:36,435 [INFO] 마지막 수정 시간: 2026-01-09 09:45:35
+2026-01-14 13:42:36,435 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png
+2026-01-14 13:42:36,435 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png
+2026-01-14 13:42:36,547 [INFO] DataInterface: File downloaded to: ./temp/IV_modified.png
+2026-01-14 13:42:36,579 [INFO] Plotted PNG overlay for interface 1767898286736, position=(0.0, 0.0, 894.0, 831.0), opacity=1.0
+2026-01-14 13:42:39,531 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, 0.0, 894.0, 831.0), opacity=1.0
+2026-01-14 13:42:41,026 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, 0.0, -2.0, 831.0), opacity=1.0
+2026-01-14 13:42:42,725 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -6.0, -2.0, 831.0), opacity=1.0
+2026-01-14 13:42:43,725 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -6.0, -2.0, -11.0), opacity=1.0
+2026-01-14 13:42:45,989 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 13:42:46,054 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 13:42:54,321 [INFO] DataInterface created. Total interfaces: 2
+2026-01-14 13:42:58,465 [INFO] DataInterface: history updated with path: ['/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/1ㄷ7.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.lis', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/temp.csv']
+2026-01-14 13:42:58,465 [INFO] DataInterface: File path set to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:42:58,619 [INFO] 마지막 수정 시간: 2026-01-14 13:42:49
+2026-01-14 13:42:58,619 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:42:58,619 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:42:59,144 [INFO] DataInterface: File downloaded to: ./temp/output.csv
+2026-01-14 13:42:59,160 [INFO] DataInterface: Data loaded with columns: ['time', 'current r1', 'current vbl', 'current vwl', 'current mn1', 'time.1', 'voltage 0', 'voltage vmos', 'voltage wl', 'voltage vp', 'time.2', 'voltage bl']
+2026-01-14 13:42:59,191 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -6.0, -2.0, -11.0), opacity=1.0
+2026-01-14 13:43:01,354 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -6.0, -2.0, -11.0), opacity=1.0
+2026-01-14 13:43:01,354 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -6.0, -2.0, -11.0), opacity=1.0
+2026-01-14 13:43:02,004 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -6.0, -2.0, -11.0), opacity=1.0
+2026-01-14 13:43:40,779 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -6.0, -2.0, -11.0), opacity=1.0
+2026-01-14 13:43:40,930 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -6.0, -2.0, -11.0), opacity=1.0
+2026-01-14 13:43:52,983 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -11.0), opacity=1.0
+2026-01-14 13:43:54,677 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:01,522 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:01,686 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:05,316 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:07,167 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,448 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,464 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,480 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,512 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,538 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,560 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,576 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,592 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,624 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,640 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,655 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,688 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,703 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,719 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,751 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,767 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,784 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,800 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,831 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,849 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,863 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,879 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:08,895 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:09,816 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:09,836 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:09,848 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:09,872 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:09,888 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:09,909 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:09,928 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:09,948 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:09,969 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:09,992 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:10,008 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:10,039 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:12,699 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:13,055 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:54,801 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:44:54,985 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:45:01,564 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:45:01,962 [INFO] Plotted PNG overlay for interface 1767898286736, position=(-2.0, -11.0, -2.0, -6.0), opacity=1.0
+2026-01-14 13:45:02,544 [INFO] 설정 저장 완료
+2026-01-14 13:45:02,598 [INFO] Error watching file: SSH session not active

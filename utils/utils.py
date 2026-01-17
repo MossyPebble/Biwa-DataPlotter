@@ -146,7 +146,9 @@ def patch_modelcard_content_inplace(
 
     # 대소문자 구분: IGNORECASE 제거
     pattern = re.compile(
-        rf'(?P<plus>\+)?(?P<key>{key_alt})(?P<ws1>\s*)=(?P<ws2>\s*)(?P<val>[^\s]+)'
+        rf'(?P<plus>\+)?'
+        rf'(?P<key>(?<![A-Za-z0-9_])(?:{key_alt})(?![A-Za-z0-9_]))'
+        rf'(?P<ws1>\s*)=(?P<ws2>\s*)(?P<val>[^\s]+)'
     )
 
     in_section = (section is None)

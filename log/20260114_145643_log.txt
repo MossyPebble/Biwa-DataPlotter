@@ -1,0 +1,68 @@
+2026-01-14 14:56:43,588 [INFO] Connected (version 2.0, client OpenSSH_7.4)
+2026-01-14 14:56:43,683 [INFO] Authentication (publickey) successful!
+2026-01-14 14:56:43,906 [INFO] [chan 0] Opened sftp connection (server version 3)
+2026-01-14 14:56:43,906 [INFO] SSH 연결 성공
+2026-01-14 14:56:45,083 [INFO] DataInterface created. Total interfaces: 1
+2026-01-14 14:56:48,171 [INFO] DataInterface: history updated with path: ['/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/1ㄷ7.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.lis', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/temp.csv']
+2026-01-14 14:56:48,179 [INFO] DataInterface: File path set to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 14:56:48,315 [INFO] 마지막 수정 시간: 2026-01-14 14:55:54
+2026-01-14 14:56:48,315 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 14:56:48,315 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 14:56:49,025 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 14:56:49,073 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 14:57:21,978 [INFO] Params loaded (remote): /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/origial/BSIM_CMG_Parameter.txt
+2026-01-14 14:57:24,718 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 14:57:24,807 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 14:57:26,214 [INFO] 마지막 수정 시간: 2026-01-14 14:57:28
+2026-01-14 14:57:26,214 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 14:57:26,214 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 14:57:27,407 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 14:57:27,454 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:02:04,291 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:02:04,661 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:02:07,358 [INFO] 마지막 수정 시간: 2026-01-14 15:02:08
+2026-01-14 15:02:07,358 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:02:07,358 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:02:09,896 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:02:09,959 [INFO] DataInterface: Data loaded with columns: [' 2.00000E-03 ', ' 2.00000E+00 ', ' 4.32794E-12 ']
+2026-01-14 15:02:22,671 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:02:22,758 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:02:24,449 [INFO] 마지막 수정 시간: 2026-01-14 15:02:25
+2026-01-14 15:02:24,449 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:02:24,449 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:02:26,111 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:02:26,176 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:05:47,395 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 15:05:48,550 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 15:05:49,693 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 15:05:50,861 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 15:05:52,040 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 15:05:53,217 [INFO] 마지막 수정 시간: 2026-01-14 15:05:55
+2026-01-14 15:05:53,217 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:05:53,217 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:05:54,807 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:05:54,949 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:06:20,134 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 15:06:21,321 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 15:06:22,465 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 15:06:23,625 [INFO] 마지막 수정 시간: 2026-01-14 15:06:25
+2026-01-14 15:06:23,625 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:06:23,625 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:06:24,900 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:06:25,046 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:06:39,039 [INFO] 마지막 수정 시간: 2026-01-14 15:06:41
+2026-01-14 15:06:39,039 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:06:39,039 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:06:40,530 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:06:41,154 [INFO] DataInterface: Data loaded with columns: ['#format table ## [Custom WaveView] saved 15:06:41 Wed Jan 14 2026']
+2026-01-14 15:07:20,300 [INFO] 마지막 수정 시간: 2026-01-14 15:07:22
+2026-01-14 15:07:20,300 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:07:20,302 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:07:20,604 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:07:20,670 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:15:57,864 [INFO] 마지막 수정 시간: 2026-01-14 15:16:00
+2026-01-14 15:15:57,864 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:15:57,864 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:15:58,424 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:15:58,533 [INFO] DataInterface: Data loaded with columns: ['#format table ## [Custom WaveView] saved 15:16:00 Wed Jan 14 2026']
+2026-01-14 15:16:23,240 [INFO] 설정 저장 완료

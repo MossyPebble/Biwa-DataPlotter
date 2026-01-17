@@ -1,0 +1,7 @@
+2026-01-14 14:02:06,976 [INFO] Connected (version 2.0, client OpenSSH_7.4)
+2026-01-14 14:02:07,047 [INFO] Authentication (publickey) successful!
+2026-01-14 14:02:07,276 [INFO] [chan 0] Opened sftp connection (server version 3)
+2026-01-14 14:02:07,276 [INFO] SSH 연결 성공
+2026-01-14 14:02:09,918 [INFO] Params loaded (remote): /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/origial/BSIM_CMG_Parameter.txt
+2026-01-14 14:02:10,769 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 14:02:10,846 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt

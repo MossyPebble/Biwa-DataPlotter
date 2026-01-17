@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QWidget, QFormLayout, QLabel, QLineEdit, QPushButton, QScrollArea, QCheckBox
+from PyQt6.QtWidgets import QWidget, QFormLayout, QLabel, QLineEdit, QPushButton, QScrollArea, QCheckBox, QComboBox
 
 import os, logging
 
@@ -12,6 +12,17 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from main import MainWindow
 
+def initializeQuickParamsTab(self: "MainWindow"):
+
+    """
+        Quick Params 탭 초기화
+    """
+
+    self.params = {'sample1': {'value': 10, 'favorite': False}, 'sample2': {'value': 20, 'favorite': True}}
+    self.fav_params = {}
+
+    self.paramsFileComboBox_history = []
+
 def createQuickParamsTab(self: "MainWindow"):
 
     """
@@ -24,8 +35,6 @@ def createQuickParamsTab(self: "MainWindow"):
             {Favorite} {param_name}: {current_value}  {-10% Button} {-5% Button} {+5% Button} {+10% Button}
         을 한 줄에 넣은 UI로 구성하는 것
     """
-
-    initializeQuickParamsTab(self)
 
     tab4Widget = QWidget()
     self.tabWidget.addTab(tab4Widget, "Quick Params")
@@ -43,8 +52,12 @@ def createQuickParamsTab(self: "MainWindow"):
 
     # 가져올 Params 파일 경로 입력란
     formLayout4.addRow("", QLabel("Params File Path"))
-    self.paramsFilePathLineEdit = QLineEdit()
-    formLayout4.addRow("File Path:", self.paramsFilePathLineEdit)
+    self.paramsFileComboBox = QComboBox()
+    self.paramsFileComboBox.setEditable(True)
+    self.paramsFileComboBox.setMinimumContentsLength(30)
+
+    # 파일 로드 버튼
+    formLayout4.addRow("File Path:", self.paramsFileComboBox)
     formLayout4.addRow("", loadParamsButton := QPushButton("Load Params"))
     loadParamsButton.clicked.connect(lambda: loadParamsFileHandler(self))
 
@@ -64,15 +77,6 @@ def createQuickParamsTab(self: "MainWindow"):
     # 견본 파라미터 표시
     updateParamsDisplay(self, self.params)
 
-def initializeQuickParamsTab(self: "MainWindow"):
-
-    """
-        Quick Params 탭 초기화
-    """
-
-    self.params = {'sample1': {'value': 10, 'favorite': False}, 'sample2': {'value': 20, 'favorite': True}}
-    self.fav_params = {}
-
 def loadParamsFileHandler(self: "MainWindow"):
 
     """
@@ -82,7 +86,7 @@ def loadParamsFileHandler(self: "MainWindow"):
     """
 
     # 파일 경로 가져오기
-    file_path = self.paramsFilePathLineEdit.text().strip()
+    file_path = self.paramsFileComboBox.currentText().strip()
     if not file_path:
         logging.info("Params file path is empty.")
         self.showTooltip("Params file path is empty.")
@@ -116,6 +120,13 @@ def loadParamsFileHandler(self: "MainWindow"):
 
         # Params 디스플레이 갱신
         updateParamsDisplay(self, self.params)
+
+        # 콤보박스 히스토리 갱신
+        # 만약 이미 존재하면 제거 후 맨 앞에 추가
+        if file_path in self.paramsFileComboBox_history: self.paramsFileComboBox_history.remove(file_path)
+        self.paramsFileComboBox_history.insert(0, file_path)
+        self.paramsFileComboBox.clear()
+        self.paramsFileComboBox.addItems(self.paramsFileComboBox_history)
 
         logging.info(f"Params loaded (remote): {file_path}")
         self.showTooltip("Params file loaded successfully. (remote)")

@@ -1,0 +1,14 @@
+2026-01-16 13:52:55,642 [INFO] Connected (version 2.0, client OpenSSH_7.4)
+2026-01-16 13:52:55,740 [INFO] Authentication (publickey) successful!
+2026-01-16 13:52:55,930 [INFO] [chan 0] Opened sftp connection (server version 3)
+2026-01-16 13:52:55,930 [INFO] SSH 연결 성공
+2026-01-16 13:52:58,704 [INFO] DataInterface created. Total interfaces: 1
+2026-01-16 13:53:01,341 [INFO] DataInterface: history updated with path: ['/home/user_r/User/CWS/Workspace/01. Rudolf/sim/output/test.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/1ㄷ7.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.lis', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/temp.csv']
+2026-01-16 13:53:01,343 [INFO] DataInterface: File path set to: /home/user_r/User/CWS/Workspace/01. Rudolf/sim/output/test.csv
+2026-01-16 13:53:01,473 [INFO] 마지막 수정 시간: 2026-01-16 13:23:04
+2026-01-16 13:53:01,474 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/01. Rudolf/sim/output/test.csv
+2026-01-16 13:53:01,474 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/01. Rudolf/sim/output/test.csv
+2026-01-16 13:53:01,923 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-16 13:53:01,952 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(0) ', 'v(bl) ', 'v(vmos) ', 'v(vp) ', 'v(wl) ', 'i(vbl) ', 'i(vwl) ', 'i(r1) ', 'i(mn1) ']
+2026-01-16 13:53:04,833 [INFO] DataInterface created. Total interfaces: 2
+2026-01-16 13:53:08,887 [INFO] 설정 저장 완료

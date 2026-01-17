@@ -147,13 +147,13 @@ class DataInterface:
         try:
             if local_path.lower().endswith(".csv"):
                 self.fileType = "csv"
-                self.data = pd.read_csv(local_path)
+                self.data = pd.read_csv(local_path, comment='#')
                 self.dataHistory.append(self.data)
                 logging.info(f"DataInterface: Data loaded with columns: {self.data.columns.tolist()}")
             elif local_path.lower().endswith(".lis"):
                 self.fileType = "lis"
                 lisToCSV(local_path)
-                self.data = pd.read_csv(local_path[:-4] + ".csv")
+                self.data = pd.read_csv(local_path[:-4] + ".csv", comment='#')
                 self.dataHistory.append(self.data)
                 logging.info(f"DataInterface: Data loaded with columns: {self.data.columns.tolist()}")
 
@@ -522,8 +522,9 @@ class DataInterface:
                 dock.data.pop(interface_id, None)
                 dock.refreshPlot()
 
-        self.frame.deleteLater()  # QFrame 삭제
-        self._label.deleteLater()  # 라벨 삭제
+        self._container.deleteLater()  # 그룹박스 삭제
+        self.frame.deleteLater()       # QFrame 삭제
+        self._label.deleteLater()      # 라벨 삭제
         logging.info("Plot deleted.")
 
     def showTooltip(self, message):

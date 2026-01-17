@@ -1,0 +1,6 @@
+2026-01-16 14:00:39,049 [INFO] Connected (version 2.0, client OpenSSH_7.4)
+2026-01-16 14:00:39,133 [INFO] Authentication (publickey) successful!
+2026-01-16 14:00:39,389 [INFO] [chan 0] Opened sftp connection (server version 3)
+2026-01-16 14:00:39,389 [INFO] SSH 연결 성공
+2026-01-16 14:00:41,670 [INFO] Params loaded (remote): /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/origial/BSIM_CMG_Parameter.txt
+2026-01-16 14:00:58,160 [INFO] 설정 저장 완료

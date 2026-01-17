@@ -1,8 +1,8 @@
-import sys, os, json, logging
+import sys, os, json, logging, threading
 from datetime import datetime
 import pandas as pd
 from PyQt6.QtWidgets import (
-    QApplication, QMainWindow, QWidget, QSplitter,QLabel, QDockWidget, QTabWidget, QLineEdit, QFormLayout, QPushButton, QMenu, QCheckBox, QTextEdit, QToolTip, QLabel, QScrollArea, QHBoxLayout, QVBoxLayout, QDialog, QSizePolicy
+    QApplication, QMainWindow, QWidget, QSplitter,QLabel, QDockWidget, QTabWidget, QLineEdit, QFormLayout, QPushButton, QMenu, QCheckBox, QTextEdit, QToolTip, QLabel, QScrollArea, QHBoxLayout, QVBoxLayout, QDialog, QSizePolicy, QComboBox
 )
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QFont, QShortcut, QKeySequence, QAction, QPixmap, QIcon
@@ -16,7 +16,7 @@ from ui.ParamRowWidget import ParamRowWidget
 from ui.tabs.SSHSettingsTab import createSSHSettingsTab, connectButtonHandler
 from ui.tabs.PlotSettingsTab import createPlotSettingsTab
 from ui.tabs.QuickChangeTab import createQuickChangeTab
-from ui.tabs.QuickParamsTab import createQuickParamsTab
+from ui.tabs.QuickParamsTab import initializeQuickParamsTab, createQuickParamsTab
 
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -61,7 +61,6 @@ class MainWindow(QMainWindow):
             'userIdLineEdit',
             'keyPathLineEdit',
             'editorFilePathLineEdit',
-            'paramsFilePathLineEdit',
             'outputParamsFileNameLineEdit'
         ]
 
@@ -71,6 +70,10 @@ class MainWindow(QMainWindow):
 
         self.checkBoxComponents = [
             'useCtrlSForParamsCheckBox'
+        ]
+
+        self.comboBoxComponents = [
+            'paramsFileComboBox'
         ]
 
         # UI 요소 관리
@@ -146,6 +149,8 @@ class MainWindow(QMainWindow):
         createSSHSettingsTab(self)
         createPlotSettingsTab(self)
         createQuickChangeTab(self)
+
+        initializeQuickParamsTab(self)
         createQuickParamsTab(self)
 
         # *************** 단축키 설정 **************
@@ -255,7 +260,14 @@ class MainWindow(QMainWindow):
 
         channel = self.ssh.invoke_shell()
         # self.ssh.execute_commands_over_shell(channel, commands, no_output=False)
-        self.ssh.send_command(commands[0])
+
+        cmd0 = commands[0]
+        threading.Thread(
+            target=self.ssh.send_command,   # 블로킹이어도 UI 안 멎음
+            args=(cmd0,),
+            daemon=True
+        ).start()
+
         channel.close()
 
     def onFileUpdated(self, remote_file_path: str):
@@ -333,6 +345,7 @@ class MainWindow(QMainWindow):
             for comp in self.lineEditComponents: config_dict[comp] = ""
             for comp in self.textEditComponents: config_dict[comp] = ""
             for comp in self.checkBoxComponents: config_dict[comp] = False
+            for comp in self.comboBoxComponents: config_dict[comp] = []
             config_dict["favorite_params"] = []
             config_dict["data_path_history"] = []
 
@@ -348,6 +361,7 @@ class MainWindow(QMainWindow):
                 for comp in self.lineEditComponents: getattr(self, comp).setText(config_dict.get(comp, ""))
                 for comp in self.textEditComponents: getattr(self, comp).setPlainText(config_dict.get(comp, ""))
                 for comp in self.checkBoxComponents: getattr(self, comp).setChecked(config_dict.get(comp, False))
+                for comp in self.comboBoxComponents: getattr(self, comp).addItems(config_dict.get(comp, []))
                 self.fav_params = set(config_dict.get("favorite_params", []))
                 self.dataPathHistory = list(config_dict.get("data_path_history", []))
 
@@ -359,6 +373,10 @@ class MainWindow(QMainWindow):
         for comp in self.lineEditComponents: config_dict[comp] = getattr(self, comp).text()
         for comp in self.textEditComponents: config_dict[comp] = getattr(self, comp).toPlainText()
         for comp in self.checkBoxComponents: config_dict[comp] = getattr(self, comp).isChecked()
+        for comp in self.comboBoxComponents: 
+            combo_box: QComboBox = getattr(self, comp)
+            items = [combo_box.itemText(i) for i in range(combo_box.count())]
+            config_dict[comp] = items
         config_dict["favorite_params"] = list(self.fav_params)
         config_dict["data_path_history"] = self.dataPathHistory
 

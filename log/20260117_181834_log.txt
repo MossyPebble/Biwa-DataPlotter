@@ -1,0 +1,5 @@
+2026-01-17 18:18:35,219 [INFO] Connected (version 2.0, client OpenSSH_7.4)
+2026-01-17 18:18:35,331 [INFO] Authentication (publickey) successful!
+2026-01-17 18:18:35,557 [INFO] [chan 0] Opened sftp connection (server version 3)
+2026-01-17 18:18:35,557 [INFO] SSH 연결 성공
+2026-01-17 18:19:17,614 [INFO] DataInterface created. Total interfaces: 1

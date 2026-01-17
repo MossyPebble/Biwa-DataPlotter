@@ -1,0 +1,587 @@
+2026-01-14 15:16:32,359 [INFO] Connected (version 2.0, client OpenSSH_7.4)
+2026-01-14 15:16:32,455 [INFO] Authentication (publickey) successful!
+2026-01-14 15:16:32,697 [INFO] [chan 0] Opened sftp connection (server version 3)
+2026-01-14 15:16:32,697 [INFO] SSH 연결 성공
+2026-01-14 15:16:36,319 [INFO] DataInterface created. Total interfaces: 1
+2026-01-14 15:16:43,189 [INFO] DataInterface: history updated with path: ['/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/1ㄷ7.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.lis', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/temp.csv']
+2026-01-14 15:16:43,201 [INFO] DataInterface: File path set to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:16:43,326 [INFO] 마지막 수정 시간: 2026-01-14 15:16:00
+2026-01-14 15:16:43,326 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:16:43,326 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:16:43,545 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:16:43,581 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:16:57,567 [INFO] Params loaded (remote): /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/origial/BSIM_CMG_Parameter.txt
+2026-01-14 15:17:05,401 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:17:05,560 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:17:06,755 [INFO] 마지막 수정 시간: 2026-01-14 15:17:08
+2026-01-14 15:17:06,755 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:17:06,755 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:17:07,265 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:17:07,281 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:17:11,070 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:17:11,190 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:17:12,523 [INFO] 마지막 수정 시간: 2026-01-14 15:17:14
+2026-01-14 15:17:12,523 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:17:12,523 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:17:12,932 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:17:12,964 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:17:16,027 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:17:16,145 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:17:17,185 [INFO] 마지막 수정 시간: 2026-01-14 15:17:19
+2026-01-14 15:17:17,185 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:17:17,185 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:17:17,423 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:17:17,459 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:17:18,639 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:17:18,783 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:17:19,611 [INFO] 마지막 수정 시간: 2026-01-14 15:17:21
+2026-01-14 15:17:19,611 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:17:19,611 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:17:19,908 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:17:19,928 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:17:21,064 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:17:21,205 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:17:21,890 [INFO] 마지막 수정 시간: 2026-01-14 15:17:24
+2026-01-14 15:17:21,890 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:17:21,890 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:17:22,464 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:17:22,495 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:17:23,191 [INFO] Params loaded (remote): /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/origial/BSIM_CMG_Parameter.txt
+2026-01-14 15:17:23,634 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:17:23,701 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:17:25,398 [INFO] 마지막 수정 시간: 2026-01-14 15:17:26
+2026-01-14 15:17:25,398 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:17:25,398 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:17:25,869 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:17:25,885 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:17:50,093 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:17:50,151 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:17:51,103 [INFO] 마지막 수정 시간: 2026-01-14 15:17:53
+2026-01-14 15:17:51,103 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:17:51,103 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:17:51,396 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:17:51,429 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:18:04,194 [INFO] DataInterface created. Total interfaces: 2
+2026-01-14 15:18:40,111 [INFO] DataInterface: history updated with path: ['/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/1ㄷ7.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.lis', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/temp.csv']
+2026-01-14 15:18:40,111 [INFO] DataInterface: File path set to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png
+2026-01-14 15:18:40,308 [INFO] 마지막 수정 시간: 2026-01-09 09:45:35
+2026-01-14 15:18:40,308 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png
+2026-01-14 15:18:40,308 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png
+2026-01-14 15:18:40,558 [INFO] DataInterface: File downloaded to: ./temp/IV_modified.png
+2026-01-14 15:18:40,595 [INFO] Plotted PNG overlay for interface 1890015668752, position=(0.0, 0.0, 894.0, 831.0), opacity=1.0
+2026-01-14 15:18:43,284 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, 0.0, 894.0, 831.0), opacity=1.0
+2026-01-14 15:18:43,941 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, 0.0, 2.0, 831.0), opacity=1.0
+2026-01-14 15:18:45,332 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 831.0), opacity=1.0
+2026-01-14 15:18:45,895 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:18:54,795 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:18:54,889 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:18:56,116 [INFO] 마지막 수정 시간: 2026-01-14 15:18:58
+2026-01-14 15:18:56,116 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:18:56,116 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:18:56,456 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:18:56,484 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:18:56,494 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:18:58,660 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:18:58,768 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:19:15,764 [INFO] 마지막 수정 시간: 2026-01-14 15:19:17
+2026-01-14 15:19:15,764 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:19:15,764 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:19:16,048 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:19:16,096 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:19:16,144 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:19:32,475 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:19:32,623 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:21:02,045 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:21:02,143 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:21:03,508 [INFO] 마지막 수정 시간: 2026-01-14 15:21:05
+2026-01-14 15:21:03,508 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:21:03,508 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:21:04,061 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:21:04,095 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:21:04,109 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:22:01,325 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:22:13,810 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:22:15,112 [INFO] 마지막 수정 시간: 2026-01-14 15:22:16
+2026-01-14 15:22:15,112 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:22:15,112 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:22:15,510 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:22:15,541 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:22:15,556 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:23:40,149 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:23:40,235 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:23:41,586 [INFO] 마지막 수정 시간: 2026-01-14 15:23:43
+2026-01-14 15:23:41,586 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:23:41,586 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:23:41,933 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:23:41,951 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:23:41,951 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:23:44,446 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:23:44,501 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:23:46,213 [INFO] 마지막 수정 시간: 2026-01-14 15:23:47
+2026-01-14 15:23:46,213 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:23:46,213 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:23:46,581 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:23:46,607 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:23:46,621 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:23:55,513 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:23:55,631 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:23:56,789 [INFO] 마지막 수정 시간: 2026-01-14 15:23:58
+2026-01-14 15:23:56,789 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:23:56,789 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:23:57,068 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:23:57,102 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:23:57,115 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:23:59,729 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:23:59,766 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:24:01,468 [INFO] 마지막 수정 시간: 2026-01-14 15:24:03
+2026-01-14 15:24:01,472 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:24:01,472 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:24:01,828 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:24:01,861 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:24:01,876 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:24:02,786 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:24:02,856 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:24:03,808 [INFO] 마지막 수정 시간: 2026-01-14 15:24:05
+2026-01-14 15:24:03,808 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:24:03,808 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:24:04,102 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:24:04,123 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:24:04,139 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:24:05,351 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:24:05,413 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:24:07,312 [INFO] 마지막 수정 시간: 2026-01-14 15:24:08
+2026-01-14 15:24:07,312 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:24:07,312 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:24:07,560 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:24:07,584 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:24:07,586 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:24:13,632 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:24:13,714 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:24:15,586 [INFO] 마지막 수정 시간: 2026-01-14 15:24:17
+2026-01-14 15:24:15,586 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:24:15,586 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:24:15,929 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:24:15,952 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:24:15,968 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:26:13,209 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:26:13,301 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:26:14,405 [INFO] 마지막 수정 시간: 2026-01-14 15:26:16
+2026-01-14 15:26:14,405 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:26:14,405 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:26:14,717 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:26:14,738 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:26:14,754 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:50,618 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:50,634 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:50,666 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:50,690 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:50,716 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:50,738 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:50,761 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:50,787 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:50,808 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:50,830 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:50,840 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:50,861 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:50,887 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:50,903 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:50,928 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:50,949 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:50,971 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:50,997 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,020 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,038 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,063 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,075 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,103 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,123 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,141 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,154 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,180 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,199 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,218 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,234 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,254 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,282 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,297 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,318 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,342 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,363 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,382 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,394 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,408 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,442 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,461 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,480 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,497 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,512 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,537 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,553 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,569 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,585 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,601 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,619 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,633 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,649 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,681 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,697 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,713 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,729 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:51,745 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,282 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,304 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,322 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,336 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,352 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,369 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,393 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,400 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,432 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,453 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,464 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,487 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,503 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,528 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,544 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,560 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,582 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,593 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,617 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,623 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,655 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,675 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,693 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,703 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,719 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,735 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,751 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,782 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,798 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,821 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,829 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,847 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,874 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,893 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,908 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,924 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,956 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,971 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:52,987 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,009 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,019 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,035 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,060 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,083 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,099 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,115 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,130 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,146 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,162 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,194 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,210 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,235 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,241 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,272 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,289 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,310 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,330 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,336 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,356 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,368 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,394 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,416 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,431 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,447 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,473 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,485 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,512 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,528 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,553 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,560 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,594 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,608 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,637 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,656 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,672 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,695 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,704 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,743 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,767 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,789 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,815 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,834 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,854 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,874 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,895 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,910 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,941 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,957 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:53,973 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,003 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,021 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,037 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,053 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,081 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,100 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,116 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,132 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,148 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,180 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,199 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,211 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,227 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,253 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,275 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,295 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,307 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,337 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,355 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,370 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,404 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,418 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,448 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,466 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,488 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,497 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,531 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,553 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,562 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,577 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,611 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,625 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,641 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,658 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,691 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,705 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,721 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,739 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,769 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,791 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,801 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,831 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,857 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,875 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,896 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,912 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,930 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,943 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,959 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:54,994 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,009 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,030 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,054 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,070 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,095 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,102 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,134 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,154 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,172 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,182 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,205 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,229 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,252 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,270 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,297 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,297 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,323 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,339 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,356 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,387 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,408 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,430 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,451 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,466 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,482 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,510 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,532 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,553 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,570 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,578 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,610 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,626 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,642 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,674 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,690 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,706 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,737 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,753 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,770 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,785 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,801 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,832 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,848 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,863 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,898 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,911 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,940 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,963 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:55,975 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:56,006 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:56,022 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:56,038 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:56,076 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:56,103 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:56,125 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:56,149 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:56,165 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:56,192 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:56,212 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:56,228 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:56,260 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:56,290 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:56,307 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:56,336 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:56,359 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:56,386 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:29:56,402 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, 11.0), opacity=1.0
+2026-01-14 15:33:00,736 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, -6.0), opacity=1.0
+2026-01-14 15:34:30,286 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:34:30,367 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:34:31,691 [INFO] 마지막 수정 시간: 2026-01-14 15:34:33
+2026-01-14 15:34:31,691 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:34:31,691 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:34:32,186 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:34:32,227 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:34:32,245 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, -6.0), opacity=1.0
+2026-01-14 15:47:09,793 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:47:09,867 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:47:12,517 [INFO] 마지막 수정 시간: 2026-01-14 15:47:14
+2026-01-14 15:47:12,517 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:47:12,517 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:47:13,002 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:47:13,042 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:47:13,049 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, -6.0), opacity=1.0
+2026-01-14 15:47:29,086 [INFO] 마지막 수정 시간: 2026-01-14 15:47:30
+2026-01-14 15:47:29,088 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:47:29,089 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:47:29,482 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:47:29,541 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:47:29,591 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, -6.0), opacity=1.0
+2026-01-14 15:47:41,138 [INFO] 마지막 수정 시간: 2026-01-14 15:47:42
+2026-01-14 15:47:41,138 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:47:41,138 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:47:41,671 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:47:41,721 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:47:41,756 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, -6.0), opacity=1.0
+2026-01-14 15:49:04,832 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:49:04,925 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:49:08,617 [INFO] 마지막 수정 시간: 2026-01-14 15:49:10
+2026-01-14 15:49:08,617 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:49:08,617 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:49:08,975 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:49:08,997 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:49:09,009 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, -6.0), opacity=1.0
+2026-01-14 15:49:12,555 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:49:12,644 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:49:15,353 [INFO] 마지막 수정 시간: 2026-01-14 15:49:17
+2026-01-14 15:49:15,353 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:49:15,353 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:49:15,653 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:49:15,691 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:49:15,701 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, -6.0), opacity=1.0
+2026-01-14 15:49:18,529 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:49:18,639 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:49:20,175 [INFO] 마지막 수정 시간: 2026-01-14 15:49:22
+2026-01-14 15:49:20,175 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:49:20,175 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:49:20,540 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:49:20,556 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:49:20,572 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, -6.0), opacity=1.0
+2026-01-14 15:49:37,355 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:49:37,458 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:49:41,089 [INFO] 마지막 수정 시간: 2026-01-14 15:49:42
+2026-01-14 15:49:41,089 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:49:41,089 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:49:41,604 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:49:41,631 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:49:41,647 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, -6.0), opacity=1.0
+2026-01-14 15:49:52,706 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:49:53,111 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:49:56,454 [INFO] 마지막 수정 시간: 2026-01-14 15:49:58
+2026-01-14 15:49:56,458 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:49:56,459 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:49:56,855 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:49:56,884 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:49:56,887 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, -6.0), opacity=1.0
+2026-01-14 15:49:58,981 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:49:59,095 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:50:02,903 [INFO] 마지막 수정 시간: 2026-01-14 15:50:04
+2026-01-14 15:50:02,903 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:50:02,903 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:50:03,326 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:50:03,349 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:50:03,359 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, -6.0), opacity=1.0
+2026-01-14 15:50:14,729 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:50:14,812 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:50:18,105 [INFO] 마지막 수정 시간: 2026-01-14 15:50:19
+2026-01-14 15:50:18,105 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:50:18,105 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:50:18,516 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:50:18,531 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:50:18,554 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, -6.0), opacity=1.0
+2026-01-14 15:50:21,130 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:50:21,231 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:50:23,015 [INFO] 마지막 수정 시간: 2026-01-14 15:50:24
+2026-01-14 15:50:23,031 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:50:23,031 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:50:23,450 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:50:23,477 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:50:23,477 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, -6.0), opacity=1.0
+2026-01-14 15:52:19,829 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:52:19,964 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:52:23,285 [INFO] 마지막 수정 시간: 2026-01-14 15:52:24
+2026-01-14 15:52:23,285 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:52:23,285 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:52:23,699 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:52:23,729 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:52:23,745 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, -6.0), opacity=1.0
+2026-01-14 15:52:23,787 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:52:23,861 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:52:25,639 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:52:25,754 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:52:27,759 [INFO] 마지막 수정 시간: 2026-01-14 15:52:29
+2026-01-14 15:52:27,759 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:52:27,759 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:52:29,157 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:52:29,179 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:52:29,182 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, -6.0), opacity=1.0
+2026-01-14 15:52:29,545 [INFO] 마지막 수정 시간: 2026-01-14 15:52:30
+2026-01-14 15:52:29,545 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:52:29,545 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:52:29,751 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:52:29,767 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:52:29,782 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, -6.0), opacity=1.0
+2026-01-14 15:52:31,332 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:52:31,409 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:52:34,080 [INFO] 마지막 수정 시간: 2026-01-14 15:52:35
+2026-01-14 15:52:34,080 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:52:34,080 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:52:34,330 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:52:34,354 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:52:34,364 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, -6.0), opacity=1.0
+2026-01-14 15:53:55,066 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:53:55,147 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:54:01,861 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:54:01,941 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:54:12,512 [INFO] 마지막 수정 시간: 2026-01-14 15:54:14
+2026-01-14 15:54:12,512 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:54:12,512 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:54:13,057 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:54:13,105 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:54:13,136 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, -6.0), opacity=1.0
+2026-01-14 15:54:19,128 [INFO] 마지막 수정 시간: 2026-01-14 15:54:21
+2026-01-14 15:54:19,128 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:54:19,265 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:54:19,679 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:54:19,726 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:54:19,758 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, -6.0), opacity=1.0
+2026-01-14 15:54:30,833 [INFO] Saving params to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:54:30,911 [INFO] Params file saved successfully: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/BSIM_CMG_Parameter.txt
+2026-01-14 15:54:33,832 [INFO] 마지막 수정 시간: 2026-01-14 15:54:36
+2026-01-14 15:54:33,832 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:54:33,832 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 15:54:34,184 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 15:54:34,198 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 15:54:34,215 [INFO] Plotted PNG overlay for interface 1890015668752, position=(-2.0, -11.0, 2.0, -6.0), opacity=1.0
+2026-01-14 16:32:08,198 [INFO] 설정 저장 완료
+2026-01-14 16:32:08,259 [INFO] Error watching file: invalid literal for int() with base 10: b''

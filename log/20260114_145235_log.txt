@@ -1,0 +1,49 @@
+2026-01-14 14:52:35,648 [INFO] Connected (version 2.0, client OpenSSH_7.4)
+2026-01-14 14:52:35,776 [INFO] Authentication (publickey) successful!
+2026-01-14 14:52:36,000 [INFO] [chan 0] Opened sftp connection (server version 3)
+2026-01-14 14:52:36,000 [INFO] SSH 연결 성공
+2026-01-14 14:52:40,203 [INFO] DataInterface created. Total interfaces: 1
+2026-01-14 14:52:43,052 [INFO] DataInterface: history updated with path: ['/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/1ㄷ7.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.lis', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/temp.csv']
+2026-01-14 14:52:43,052 [INFO] DataInterface: File path set to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 14:52:43,237 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:52:44,431 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:52:45,596 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:52:47,414 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:52:48,573 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:52:49,763 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:52:50,925 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:52:52,072 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:52:53,231 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:52:54,348 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:52:55,464 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:52:56,639 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:52:57,762 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:52:58,923 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:53:00,093 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:53:01,236 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:53:02,421 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:53:03,662 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:53:04,787 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:53:05,953 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:53:07,110 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:53:07,159 [INFO] DataInterface created. Total interfaces: 2
+2026-01-14 14:53:08,301 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:53:09,461 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:53:09,538 [INFO] DataInterface: history updated with path: ['/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/1ㄷ7.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.lis', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/temp.csv']
+2026-01-14 14:53:09,538 [INFO] DataInterface: File path set to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 14:53:09,681 [INFO] 마지막 수정 시간: 2026-01-14 14:51:42
+2026-01-14 14:53:09,681 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 14:53:09,681 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv
+2026-01-14 14:53:10,586 [INFO] DataInterface: File downloaded to: ./temp/test.csv
+2026-01-14 14:53:10,657 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:53:10,747 [INFO] DataInterface: Data loaded with columns: ['#format table ## [Custom WaveView] saved 14:51:42 Wed Jan 14 2026']
+2026-01-14 14:53:11,823 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:53:13,001 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:53:14,186 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:53:15,298 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:53:16,403 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:53:17,586 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:53:18,743 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:53:19,902 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:53:21,046 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-14 14:53:21,493 [INFO] 설정 저장 완료

@@ -1,0 +1,14 @@
+2026-01-14 10:45:17,885 [INFO] Connected (version 2.0, client OpenSSH_7.4)
+2026-01-14 10:45:17,979 [INFO] Authentication (publickey) successful!
+2026-01-14 10:45:18,187 [INFO] [chan 0] Opened sftp connection (server version 3)
+2026-01-14 10:45:18,187 [INFO] SSH 연결 성공
+2026-01-14 10:46:42,991 [INFO] DataInterface created. Total interfaces: 1
+2026-01-14 12:30:05,326 [INFO] DataInterface: history updated with path: ['/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/1ㄷ7.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.lis', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/temp.csv']
+2026-01-14 12:30:05,331 [INFO] DataInterface: File path set to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/1ㄷ7.csv
+2026-01-14 12:30:05,951 [INFO] 마지막 수정 시간: 2026-01-13 15:17:00
+2026-01-14 12:30:05,951 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/1ㄷ7.csv
+2026-01-14 12:30:05,963 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/1ㄷ7.csv
+2026-01-14 12:30:06,081 [INFO] DataInterface: File downloaded to: ./temp/1ㄷ7.csv
+2026-01-14 12:30:06,112 [INFO] DataInterface: Data loaded with columns: ['x', ' y']
+2026-01-14 12:30:11,247 [INFO] DataInterface created. Total interfaces: 2
+2026-01-14 12:30:12,405 [INFO] 설정 저장 완료

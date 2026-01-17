@@ -1,0 +1,47 @@
+2026-01-16 09:09:30,883 [INFO] Connected (version 2.0, client OpenSSH_7.4)
+2026-01-16 09:09:30,967 [INFO] Authentication (publickey) successful!
+2026-01-16 09:09:31,166 [INFO] [chan 0] Opened sftp connection (server version 3)
+2026-01-16 09:09:31,166 [INFO] SSH 연결 성공
+2026-01-16 09:09:36,013 [INFO] DataInterface created. Total interfaces: 1
+2026-01-16 09:09:38,029 [INFO] DataInterface: history updated with path: ['/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/1ㄷ7.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.lis', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/temp.csv']
+2026-01-16 09:09:38,046 [INFO] DataInterface: File path set to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-16 09:09:38,176 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:09:39,361 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:09:40,515 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:09:41,734 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:09:42,883 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:09:44,017 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:09:45,150 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:09:46,378 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:09:47,511 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:09:48,631 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:09:49,784 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:09:50,909 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:09:52,033 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:09:53,183 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:09:54,349 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:09:55,486 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:09:56,656 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:09:57,831 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:09:58,997 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:00,114 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:01,259 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:02,436 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:03,564 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:04,716 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:05,876 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:07,077 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:08,211 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:09,326 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:10,479 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:11,594 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:12,709 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:13,828 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:14,960 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:16,076 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:17,203 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:18,357 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:19,517 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:20,639 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:21,814 [INFO] Error watching file: invalid literal for int() with base 10: b''
+2026-01-16 09:10:22,260 [INFO] 설정 저장 완료

@@ -1,0 +1,38 @@
+2026-01-14 13:45:06,624 [INFO] Connected (version 2.0, client OpenSSH_7.4)
+2026-01-14 13:45:06,712 [INFO] Authentication (publickey) successful!
+2026-01-14 13:45:06,965 [INFO] [chan 0] Opened sftp connection (server version 3)
+2026-01-14 13:45:06,965 [INFO] SSH 연결 성공
+2026-01-14 13:45:08,195 [INFO] DataInterface created. Total interfaces: 1
+2026-01-14 13:45:09,581 [INFO] DataInterface: history updated with path: ['/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/IV_modified.png', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/ref/1ㄷ7.csv', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output/test.lis', '/home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/temp.csv']
+2026-01-14 13:45:09,583 [INFO] DataInterface: File path set to: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:45:09,731 [INFO] 마지막 수정 시간: 2026-01-14 13:42:49
+2026-01-14 13:45:09,731 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:45:09,731 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:45:10,036 [INFO] DataInterface: File downloaded to: ./temp/output.csv
+2026-01-14 13:45:10,062 [INFO] DataInterface: Data loaded with columns: ['time', 'current r1', 'current vbl', 'current vwl', 'current mn1', 'time.1', 'voltage 0', 'voltage vmos', 'voltage wl', 'voltage vp', 'time.2', 'voltage bl']
+2026-01-14 13:53:13,746 [INFO] 마지막 수정 시간: 2026-01-14 13:53:15
+2026-01-14 13:53:13,748 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:53:13,748 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:53:14,992 [INFO] 마지막 수정 시간: 2026-01-14 13:53:16
+2026-01-14 13:53:14,992 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:53:35,147 [INFO] DataInterface: File downloaded to: ./temp/output.csv
+2026-01-14 13:53:35,747 [INFO] DataInterface: Data loaded with columns: ['#format table ## [Custom WaveView] saved 13:53:14 Wed Jan 14 2026']
+2026-01-14 13:53:35,756 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:53:40,858 [INFO] DataInterface: File downloaded to: ./temp/output.csv
+2026-01-14 13:53:41,572 [INFO] DataInterface: Data loaded with columns: ['#format table ## [Custom WaveView] saved 13:53:14 Wed Jan 14 2026']
+2026-01-14 13:54:02,097 [INFO] 마지막 수정 시간: 2026-01-14 13:54:03
+2026-01-14 13:54:02,097 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:54:02,098 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:54:03,026 [INFO] DataInterface: File downloaded to: ./temp/output.csv
+2026-01-14 13:54:03,187 [INFO] DataInterface: Data loaded with columns: ['#format table ## [Custom WaveView] saved 13:54:03 Wed Jan 14 2026']
+2026-01-14 13:54:20,805 [INFO] 마지막 수정 시간: 2026-01-14 13:54:22
+2026-01-14 13:54:20,805 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:54:20,805 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:54:22,383 [INFO] DataInterface: File downloaded to: ./temp/output.csv
+2026-01-14 13:54:22,432 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 13:54:23,172 [INFO] 마지막 수정 시간: 2026-01-14 13:54:24
+2026-01-14 13:54:23,172 [INFO] 파일이 변경되었습니다: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:54:23,172 [INFO] DataInterface: File updated signal received for: /home/user_r/User/CWS/Workspace/04_Fe_HZO_HYU(CWS)/output.csv
+2026-01-14 13:54:24,289 [INFO] DataInterface: File downloaded to: ./temp/output.csv
+2026-01-14 13:54:24,336 [INFO] DataInterface: Data loaded with columns: ['TIME ', 'v(wl) ', 'i(r1) ']
+2026-01-14 14:02:04,059 [INFO] 설정 저장 완료
